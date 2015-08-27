@@ -66,6 +66,8 @@ html
 .bespoke-active
   pointer-events: auto
   opacity: 1
+  // Webkit requires z-index to be 1 for elements to receive focus
+  z-index: 1
   .content
     opacity: 1
 
@@ -141,7 +143,17 @@ ul
       &:first-of-type
         transition: opacity 0.8s ease 4s
 
-section.topic
+.bespoke-slide.title
+  justify-content: flex-end
+  align-items: flex-end
+  h1
+    font-size: 2.5em
+    margin: 0 10% 10% 0
+    text-shadow: 0 1px 5px rgba(0,0,0,.15)
+    font-weight: 700
+    color: #fff
+
+.bespoke-slide.topic
   background-image: url(../images/topic-slide.svg)
   background-size: cover
 
