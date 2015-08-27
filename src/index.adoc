@@ -12,6 +12,11 @@
 [.topic]
 == [:Modeling]
 
+[.subject]
+== Spring Data Neo4j
+
+image::spring-data-neo4j.png[Spring Data Neo4j]
+
 [.background.fit]
 == The world is a graph
 
