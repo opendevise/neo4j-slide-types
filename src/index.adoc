@@ -1,0 +1,43 @@
+= Neo4j Slide Types
+
+[.agenda]
+== Agenda
+
+* Databases are no fun
+* Relational pain -> Graph fun
+* The world is a graph
+* Model, query, import
+* Developer zone fun
+
+[.topic]
+== [:Modeling]
+
+[.background.fit]
+== The world is a graph
+
+image::backdrop-mountains.jpg[Mountains,1280,720]
+
+[.quote]
+== !
+
+"The advantage of _not_ using an aggregate structure in the database is that it allows you to slice and dice your data [underline]#different ways# for [underline]#different audiences#."
+-- Martin Fowler
+
+[.query-result]
+== Query Title Here
+
+[source,cypher]
+----
+MATCH (h1:Hashtag)-[:TAGS]->(TWEET)<-[:TAGS]-(h2:Hashtag)
+WHERE h1.name = {hashtag}
+RETURN h1.name AS from, h2.name AS to, COUNT(*) AS value
+----
+
+....
+## id      u.username  mentions
+##  1   hadleywickham        43
+##  2        RLangTip         6
+##  3  nicolemargaret         6
+##  4        hrbrmstr         6
+##  5       megcevans         5
+....

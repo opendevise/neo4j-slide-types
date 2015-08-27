@@ -1,0 +1,6 @@
+{
+  "name": "presentation-neo4j-slide-types",
+  "dependencies": {
+    "prism": "gh-pages"
+  }
+}

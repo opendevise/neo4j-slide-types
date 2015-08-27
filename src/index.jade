@@ -1,0 +1,53 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title Neo4j Slide Types
+    link(rel='stylesheet', type='text/css', href='build/build.css')
+
+  body
+    article.deck
+      section
+        .content
+          h1 Neo4j Slide Types
+
+      section
+        .content.agenda
+          ul.agenda
+            li Databases are no fun
+            li Relational pain -&gt; Graph fun
+            li The world is a graph
+            li Model, query, import
+            li Developer zone fun
+
+      section.topic
+        .content
+          h2 [:Modeling]
+
+      section
+        .content(style='background-image: url(images/backdrop-mountains.jpg); background-size: cover')
+          .image-caption The world is a graph
+
+      section(data-bespoke-backdrop='martin-fowler')
+        .content.quote
+          blockquote “The advantage of not using an aggregate structure in the database is that it allows you to slice and dice your data <span style="border-bottom: 1px solid #ddd">different ways</span> for <span style="border-bottom: 1px solid #ddd">different audiences</span>.”
+          cite — Martin Fowler —
+
+      section
+        .content.code
+          .query.bullet
+            .label Query Title Here
+            pre.code(data-language=cypher).
+              <span class="keyword">MATCH</span> (h1:Hashtag)-[:TAGS]-&gt;(TWEET)&lt;-[:TAGS]-(h2:Hashtag)
+              <span class="keyword">WHERE</span> h1.name = {hashtag}
+              <span class="keyword">RETURN</span> h1.name <span class="keyword">AS</span> from, h2.name <span class="keyword">AS</span> to, <span class="function">COUNT(</span>*<span class="function">)</span> <span class="keyword">AS</span> value
+          pre.result.bullet.
+            ## id      u.username  mentions
+            ##  1   hadleywickham        43
+            ##  2        RLangTip         6
+            ##  3  nicolemargaret         6
+            ##  4        hrbrmstr         6
+            ##  5       megcevans         5
+
+    script(src='build/build.js')

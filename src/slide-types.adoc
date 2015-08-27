@@ -1,0 +1,63 @@
+= Neo4j Slide Types
+
+== Title
+
+A _title slide_ contains the presentation title and, optionally, information about the speaker.
+It's typically the opening slide in the presentation.
+A full bleed background image should be used to give the presentation a unique identity.
+
+== Speaker / Credentials
+
+A _speaker / credentials slide_ communicates information about the speaker to the audience.
+This slide should only contain essential information:
+
+* Speaker name
+* Speaker title
+* Speaker headshot
+* Up to two contact addresses (e-mail, link, screenname)
+
+== Agenda
+
+An _agenda slide_ contains a list of each major topic in the presentation.
+It serves as the presentation's table of contents.
+Eventually, we envision it being generated automatically from the topic slides and, optionally, inserted between each topic as a checkpoint in the presentation.
+
+== Topic
+
+A _topic slide_ consists of a title and, optionally, supporting imagery for that topic.
+These slides identify the presentation "`chapters`".
+Each topic slide will use one of several predetermined layouts and either the same image throughout the presentation or an image per topic.
+
+== Subject
+
+A _subject slide_ communicates the current subject (proper noun) of discussion.
+It may be a photo of a person or place or another visual identifier (e.g., a logo).
+If necessary, a caption can be added to explicitly label the subject.
+
+== Image
+
+An _image slide_ contains of an image and, optionally, a caption.
+The image is specified using a block image macro.
+The caption is specified either as the section title or the block title, which may affect how it gets displayed.
+By default, the image is displayed centered on the page in it's native resolution.
+One or more roles can be used to control how it fits in the page.
+The most common is `.background.fit`, which will fit the image to the background size.
+
+== Quote
+
+A _quote slide_ contains a spoke or written quote by a person or other source.
+The quote text is the focus of the slide and should stand out as much as possible.
+If the quote is long, excerpts in the quote should be emphasized or highlighted.
+To reach the audience emotionally, an image of the author (or source) should be used as a full-bleed backdrop.
+A subtle and steady transition on the backdrop helps bring the quote to life.
+As an alternative to the image of the speaker or source, background imagery can be used that reinforces the quote's message.
+
+== Code
+
+A _code slide_ contains sample source code along with zero or more callouts.
+Code is very meaningful to the Neo audience and thus should be given the maximum attention on the slide.
+That means the code should be centered, take up as much space on the slide as possible and be displayed in a large, readable font.
+High contrast (dark background, light text) can be used to "dim the lights" and put the code in the spotlight.
+Consider breaking from the traditional top-down flow and put callouts above and below and code to keep the code centered.
+
+
