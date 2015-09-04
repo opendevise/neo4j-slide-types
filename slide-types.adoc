@@ -78,6 +78,17 @@ In other words, don't give anything away yet.
 Let the topic sit out there and take hold in the audiences' brains.
 Antici...
 
+== Statement / Question / Advice
+
+A _statement / question / advice slide_ reinforces the central point, takeaway or crux of a longer explanation or makes a transition (rising action) from one point to another.
+It might be something the audience records word-for-word in their notebook or tweets.
+It also reminds the audience where they are in the narrative, grounds them or invites them alone with you on the journey.
+
+Since a statement slide is all about the words, you should leverage typography to its full extent to turn the words into imagery.
+The words should be big and bold or otherwise stand out.
+A display font works best here.
+Use color to make it less stark and to emphasize key words.
+
 == Subject
 
 Sometimes, you want to put a subject into the audience's mind so you can speak about it.
@@ -163,17 +174,6 @@ A code slide may be cause and effect (e.g., a query and its results) or an anato
 
 Avoid the temptation of cramming numerous examples on a single slide.
 Progress the audience gradually by giving each distinct code snippet its own slide.
-
-== Statement / Question / Advice
-
-A _statement / question / advice slide_ reinforces the central point, takeaway or crux of a longer explanation or makes a transition (rising action) from one point to another.
-It might be something the audience records word-for-word in their notebook or tweets.
-It also reminds the audience where they are in the narrative, grounds them or invites them alone with you on the journey.
-
-Since a statement slide is all about the words, you should leverage typography to its full extent to turn the words into imagery.
-The words should be big and bold or otherwise stand out.
-A display font works best here.
-Use color to make it less stark and to emphasize key words.
 
 == List
 
