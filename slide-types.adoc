@@ -32,6 +32,8 @@ What's important is that they understand that if they need to contact you, the i
 
 Introduce yourself and move on.
 
+A good example of this slide type can be found in the https://speakerdeck.com/pedronauck/reactjs-keep-simple-everything-can-be-a-component[Keep it Simple, Everything Can Be a Component] deck.
+
 == Agenda
 
 An _agenda slide_ contains a list of each major topic in the presentation, serving as the presentation's table of contents.
