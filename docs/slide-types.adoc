@@ -233,6 +233,8 @@ These techniques include:
 
 image::list-slide.jpg[]
 
+image::list-slide-3.jpg[]
+
 == Sequence / Ranking
 
 A _sequence slide_ is similar to a list slide except it assigns an explicit ordering to the items.
@@ -256,10 +258,26 @@ A good example of this slide type can be found in the https://speakerdeck.com/pe
 
 image::axis-slide.jpg[]
 
-////
+image::axis-slide-2.jpg[]
+
 == Comic Relief
 
-...
+Presentations, even short ones, can be tiring.
+People can't just receive, receive, receive.
+They need breaks.
+Give your audience a chance to rest their brains ever so often using a little comic relief.
+You'll find that after, they will feel refreshed and ready to get back to learning.
+
+A _comic relief_ slide is meant to be a small reward along the journey.
+Give the audience this reward in exchange for their attention.
+The comedy can still be tangentially related to the topic, but the focus should be on the relief, not more learning.
+
+Animated GIFs work well here.
+A simple photo will also do.
+
+image::comic-relief-slide.jpg[]
+
+////
 
 == Summary / Recap
 
