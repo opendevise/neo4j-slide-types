@@ -1,4 +1,5 @@
 = Neo4j Slide Types
+OpenDevise_Inc.
 :imagesdir: images
 :toc: macro
 
