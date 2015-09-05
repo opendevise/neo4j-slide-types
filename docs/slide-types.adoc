@@ -39,7 +39,7 @@ You may want to insert this slide again at the end of the presentation so you le
 
 Introduce yourself and move on.
 
-A good example of this slide type can be found in the https://speakerdeck.com/pedronauck/reactjs-keep-simple-everything-can-be-a-component[Keep it Simple, Everything Can Be a Component] deck.
+//A good example of this slide type can be found in the https://speakerdeck.com/pedronauck/reactjs-keep-simple-everything-can-be-a-component[Keep it Simple, Everything Can Be a Component] deck.
 
 image::speaker-slide.jpg[]
 
@@ -59,7 +59,7 @@ You want some mystery.
 The agenda slide can be used to give them a break, reward them by reminding them of what they've learned and ensure they only think about progress when you want them to.
 
 One interesting idea is to associate each agenda item with an icon and then use the list of icons as a way to show progress.
-For an example, see https://speakerdeck.com/orderedlist/producing-creativity[Producing Creativity].
+//For an example, see https://speakerdeck.com/orderedlist/producing-creativity[Producing Creativity].
 
 image::agenda-slide.jpg[]
 
@@ -258,7 +258,8 @@ The same techniques can be used to encourage focus on the current item.
 However, a better technique to consider is to split the list into multiple slides so each item gets its own canvas.
 That breaks you out of the habit of creating subitems.
 Instead, you can use intermediatary slides to reinforce a point before moving on to the next item.
-A good example of this technique is https://speakerdeck.com/hatefulcrawdad/stop-working-from-a-prison-cell[Stop Working from a Prison Cell].
+
+//A good example of this technique is https://speakerdeck.com/hatefulcrawdad/stop-working-from-a-prison-cell[Stop Working from a Prison Cell].
 
 image::sequence-slide.jpg[]
 
@@ -268,7 +269,8 @@ image::sequence-slide.jpg[]
 An _axis slide_ presents two or more subjects to emphasize the distinction between them.
 It might be something like a Yin and Yang or two sides of a coin.
 This type of slide usually shows the subjects with a dividing line between them.
-A good example of this slide type can be found in the https://speakerdeck.com/pedronauck/reactjs-keep-simple-everything-can-be-a-component[Keep it Simple, Everything Can Be a Component] deck.
+
+//A good example of this slide type can be found in the https://speakerdeck.com/pedronauck/reactjs-keep-simple-everything-can-be-a-component[Keep it Simple, Everything Can Be a Component] deck.
 
 image::axis-slide.jpg[]
 
