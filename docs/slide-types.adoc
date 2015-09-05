@@ -122,7 +122,11 @@ image::subject-slide.jpg[]
 
 == Definition
 
-...
+A _definition slide_ is used to define a term and to communicate the intent to define the term.
+It's easy to lose the audience when introducing new terminology.
+A definition slide gives you a chance to slow down, let the audience know that it's okay to not know the term and take the time to define it.
+It provides an important foothold for all the discussions that are to come.
+Making the content appear like a dictionary entry helps flag it implicitly as a definition.
 
 image::definition-slide-4.jpg[]
 
