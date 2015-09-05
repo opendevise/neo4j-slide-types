@@ -2,6 +2,9 @@
 :imagesdir: images
 :toc: macro
 
+The following is a list of *proposed* slide types to help bring more structure to presentation decks and ease slide creation.
+Each type consists of a definition, recommendations and a set of design comps.
+
 toc::[]
 
 == Title
