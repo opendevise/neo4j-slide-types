@@ -15,6 +15,11 @@ Another is to use the same image but with a different angle or perspective per t
 For Neo, the image may be a character or scene from the Matrix, thus using the imagery to suggest the topic.
 That way, the audience will still associate the image with the brand, but you're able to get away from a stark, corporate-looking title slide.
 
+A well-designed title slide (as well as speaker slide) ensures your presentation makes a great first impression.
+It also gives the audience the sense that this is very professional.
+
+//image::title-slide.jpg[]
+
 == Speaker / Credentials
 
 A _speaker / credentials slide_ communicates information about the speaker to the audience.
@@ -29,10 +34,13 @@ It's important to personalize this slide with a picture of yourself, but otherwi
 The audience wants to get to know you, but they don't need your life story.
 Remember that they are there to learn about the topic, not your life.
 What's important is that they understand that if they need to contact you, the information is there for them to find it later.
+You may want to insert this slide again at the end of the presentation so you leave the audience with a way of contacting you.
 
 Introduce yourself and move on.
 
 A good example of this slide type can be found in the https://speakerdeck.com/pedronauck/reactjs-keep-simple-everything-can-be-a-component[Keep it Simple, Everything Can Be a Component] deck.
+
+image::speaker-slide.jpg[]
 
 == Agenda
 
@@ -52,6 +60,8 @@ The agenda slide can be used to give them a break, reward them by reminding them
 One interesting idea is to associate each agenda item with an icon and then use the list of icons as a way to show progress.
 For an example, see https://speakerdeck.com/orderedlist/producing-creativity[Producing Creativity].
 
+image::agenda-slide.jpg[]
+
 === Schedule
 
 A _schedule slide_ is similar to an agenda, but it incorporates time and external events, such as a coffee break or lunch.
@@ -63,6 +73,7 @@ For instance, think of the agenda-style layout used for a conference schedule.
 == Topic
 
 A _topic slide_ consists of a title (or statement) and, ideally, supporting imagery for that topic.
+Only if truly adds value should you consider including a subtopic as well, but make it subtle (e.g., subtext).
 These slides identify the presentation "`chapters`" and likely map back to an entry on the _agenda slide_.
 Each topic slide will use one of several predefined layouts and either the same image throughout the presentation or an image per topic.
 
@@ -78,6 +89,10 @@ In other words, don't give anything away yet.
 Let the topic sit out there and take hold in the audiences' brains.
 Antici...
 
+image::topic-slide-2.jpg[]
+
+image::topic-slide-breadcrumbs.jpg[]
+
 == Statement / Question / Advice
 
 A _statement / question / advice slide_ reinforces the central point, takeaway or crux of a longer explanation or makes a transition (rising action) from one point to another.
@@ -89,6 +104,8 @@ The words should be big and bold or otherwise stand out.
 A display font works best here.
 Use color to make it less stark and to emphasize key words.
 
+image::statement-slide.jpg[]
+
 == Subject
 
 Sometimes, you want to put a subject into the audience's mind so you can speak about it.
@@ -99,6 +116,14 @@ If necessary, a caption can be added to explicitly label the subject, but it's m
 It's tempting to want to crowd the slide with (random) facts about the subject in the form of bullets.
 Don't do it!
 You want the audience to focus on what you are saying, your message, not trying to figure out what all the facts mean and how they relate to what you're jabbering on about.
+
+image::subject-slide.jpg[]
+
+== Definition
+
+...
+
+image::definition-slide-4.jpg[]
 
 == Exercise
 
@@ -152,6 +177,8 @@ If using a backdrop, a subtle and steady transition on the backdrop helps bring 
 
 As an alternative to the image of the speaker or source, a background image or video can be added that reinforces the quote's message or otherwise establishes the setting, mood or tone.
 
+image::quote-slide.jpg[]
+
 === Dialogue / Conversation
 
 A _dialogue / conversation slide_ is similar to a quote slide except there is more than one “voice” being represented.
@@ -175,6 +202,10 @@ A code slide may be cause and effect (e.g., a query and its results) or an anato
 Avoid the temptation of cramming numerous examples on a single slide.
 Progress the audience gradually by giving each distinct code snippet its own slide.
 
+image::code-slide.jpg[]
+
+image::command-slide.jpg[]
+
 == List
 
 Humans love to create lists, but audiences don't always like to receive them.
@@ -195,6 +226,8 @@ These techniques include:
 * overlay / swap
 * scatter
 
+image::list-slide.jpg[]
+
 == Sequence / Ranking
 
 A _sequence slide_ is similar to a list slide except it assigns an explicit ordering to the items.
@@ -206,6 +239,8 @@ That breaks you out of the habit of creating subitems.
 Instead, you can use intermediatary slides to reinforce a point before moving on to the next item.
 A good example of this technique is https://speakerdeck.com/hatefulcrawdad/stop-working-from-a-prison-cell[Stop Working from a Prison Cell].
 
+image::sequence-slide.jpg[]
+
 == Axis
 //== Contrast / Juxtapose / Division / Partition / Axis
 
@@ -213,3 +248,19 @@ An _axis slide_ presents two or more subjects to emphasize the distinction betwe
 It might be something like a Yin and Yang or two sides of a coin.
 This type of slide usually shows the subjects with a dividing line between them.
 A good example of this slide type can be found in the https://speakerdeck.com/pedronauck/reactjs-keep-simple-everything-can-be-a-component[Keep it Simple, Everything Can Be a Component] deck.
+
+image::axis-slide.jpg[]
+
+////
+== Comic Relief
+
+...
+
+== Summary / Recap
+
+...
+
+== Screenshot
+
+...
+////
