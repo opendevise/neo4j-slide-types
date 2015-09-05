@@ -305,16 +305,22 @@ A simple photo will also do.
 
 image::comic-relief-slide.jpg[]
 
+== Resource
+
+A _resource slide_ is a collection of links or other references at the end of a talk.
+It's hard, but try to not make this look like a data dump.
+Emphasize the important part of each term and put the rest of the detail in a finer print.
+
+image::resource-slide.jpg[]
+
+image::resource-slide-2.jpg[]
+
 ////
 == Summary / Recap
 
 ...
 
 == Screenshot
-
-...
-
-== Resources
 
 ...
 ////
