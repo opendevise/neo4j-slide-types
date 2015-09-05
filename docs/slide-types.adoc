@@ -81,7 +81,7 @@ Each topic slide will use one of several predefined layouts and either the same 
 A topic slide helps transition from one topic to another.
 It also gives the audience a short break, let's them come up for air and prepare their brains to start learning something new.
 
-A good way to break up the monotony and rigity of plain topics is to replace it with a question instead.
+A good way to break up the monotony and rigidity of plain topics is to replace it with a question instead.
 You are likely introducing a topic to answer a question or address a need.
 So start off by posing the question or challenge and then use the material to address it.
 
@@ -269,7 +269,7 @@ Having said that, ensure that the items really are part of a sequence and that y
 The same techniques can be used to encourage focus on the current item.
 However, a better technique to consider is to split the list into multiple slides so each item gets its own canvas.
 That breaks you out of the habit of creating subitems.
-Instead, you can use intermediatary slides to reinforce a point before moving on to the next item.
+Instead, you can use intermediary slides to reinforce a point before moving on to the next item.
 
 //A good example of this technique is https://speakerdeck.com/hatefulcrawdad/stop-working-from-a-prison-cell[Stop Working from a Prison Cell].
 
@@ -293,8 +293,8 @@ image::axis-slide-2.jpg[]
 Presentations, even short ones, can be tiring.
 People can't just receive, receive, receive.
 They need breaks.
-Give your audience a chance to rest their brains ever so often using a little comic relief.
-You'll find that after, they will feel refreshed and ready to get back to learning.
+Give your audience a chance to rest their brains every so often using a little comic relief.
+You'll find that afterwards, they'll feel refreshed and ready to get back to learning.
 
 A _comic relief_ slide is meant to be a small reward along the journey.
 Give the audience this reward in exchange for their attention.
