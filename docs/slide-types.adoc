@@ -144,6 +144,8 @@ Making the content appear like a dictionary entry helps flag it implicitly as a 
 
 image::definition-slide-4.jpg[]
 
+image::definition-slide.jpg[]
+
 == Exercise
 
 An _exercise slide_ defines a task or challenge for the audience to complete.
@@ -198,12 +200,22 @@ As an alternative to the image of the speaker or source, a background image or v
 
 image::quote-slide.jpg[]
 
+image::quote-slide-2.jpg[]
+
+////
+=== Tweet
+
+...
+////
+
 === Dialogue / Conversation
 
 A _dialogue / conversation slide_ is similar to a quote slide except there is more than one “voice” being represented.
 While a quote helps support a point, a dialogue helps show that there are multiple sides to the story and gets the audience thinking about where they side.
 It might also help to get a discussion started in the room.
 Seeing that people have different views makes audience members aware they might have their own to share.
+
+image::dialogue-slide.jpg[]
 
 == Code
 
@@ -294,12 +306,15 @@ A simple photo will also do.
 image::comic-relief-slide.jpg[]
 
 ////
-
 == Summary / Recap
 
 ...
 
 == Screenshot
+
+...
+
+== Resources
 
 ...
 ////
