@@ -130,9 +130,9 @@ A _URL slide_ is a specialized subject slide that's main intent is to share a UR
 Whenever you share a URL, you should include a screenshot of where that URL leads so that the audience knows what to expect and are confident they found the right place when they arrive there.
 It's also easy information to digest, so it gives the audience a chance to take a small break.
 
-image::url-slide.jpg[]
-
 image::url-slide-2.jpg[]
+
+image::url-slide.jpg[]
 
 == Definition
 
