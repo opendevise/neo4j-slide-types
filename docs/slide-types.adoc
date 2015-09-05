@@ -1,4 +1,5 @@
 = Neo4j Slide Types
+:imagesdir: images
 :toc: macro
 
 toc::[]
