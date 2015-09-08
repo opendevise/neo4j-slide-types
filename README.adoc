@@ -4,18 +4,17 @@ A http://markdalgleish.com/projects/bespoke.js[Bespoke.js] presentation that ide
 
 == View slides locally
 
-First, ensure you have the following installed:
+First, ensure you have a JDK installed.
 
-. http://nodejs.org[Node.js]
-. http://bower.io[Bower]:
+Next, execute the `build` task using the Gradle Wrapper.
+This task will setup Node and NPM, install packages and run the build by delegating to Gulp:
 
- $ npm install -g bower
+ $ ./gradlew build
 
-. http://gulpjs.com[Gulp]
+The output will be compiled into the [path]_dist_ folder.
 
- $ npm install -g gulp
+To run in development mode so that changes take affect immediately, use the `serve` task:
 
-Then, install dependencies and run the preview server:
+ $ ./gradlew serve
 
- $ npm install && bower install
- $ gulp serve
+You can see the result at \http://localhost:8080.
