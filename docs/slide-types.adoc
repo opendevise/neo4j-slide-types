@@ -106,7 +106,7 @@ A _statement / question / advice slide_ reinforces the central point, takeaway o
 It might be something the audience records word-for-word in their notebook or tweets.
 It also reminds the audience where they are in the narrative, grounds them or invites them alone with you on the journey.
 
-Since a statement slide is all about the words, you should leverage typography to its full extent to turn the words into imagery.
+Since a statement slide is all about the words, you should leverage typography to its full extent to turn the words into imagery (see http://www.smashingmagazine.com/2012/06/subtle-typographic-choices-make-difference/[When Subtle Typographic Choices Make All The Difference] and http://www.smashingmagazine.com/2012/04/when-typography-speaks-louder-than-words/[When Typography Speaks Louder Than Words]).
 The words should be big and bold or otherwise stand out.
 A display font works best here.
 Use color to make it less stark and to emphasize key words.
@@ -327,4 +327,10 @@ image::resource-slide-2.jpg[]
 == Screenshot
 
 ...
+
+== Other ideas
+
+* transition / flash
+* sequence master/detail
+
 ////
