@@ -25,13 +25,17 @@ gulp {
   bufferOutput = false
 }
 
-task build {}
 gulp_build.dependsOn npmInstall
+task build {}
 build.dependsOn gulp_build
 
-task serve {}
 gulp_serve.dependsOn npmInstall
+task serve {}
 serve.dependsOn gulp_serve
+
+gulp_deploy.dependsOn npmInstall
+task deploy {}
+deploy.dependsOn gulp_deploy
 
 task gulpTasks(type: GulpTask) {
   args = ['--tasks-simple']
