@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1280"
+   height="720"
+   viewBox="0 0 1280 720"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="author-full-bleed-slide.svg">
+  <defs
+     id="defs4">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4259">
+      <circle
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+         id="circle4261"
+         cx="420.32251"
+         cy="360"
+         r="250"
+         transform="scale(-1,1)" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4259-4">
+      <circle
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+         id="circle4261-7"
+         cx="420.32251"
+         cy="360"
+         r="250"
+         transform="scale(-1,1)" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4579">
+      <rect
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#008cc2;fill-opacity:0.3692308;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+         id="rect4581"
+         width="1280"
+         height="720"
+         x="0"
+         y="-9.9999997e-06" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="539.98859"
+     inkscape:cy="285.3195"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer5"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1014"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="full bleed"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <image
+       y="-122.3917"
+       x="-78"
+       id="image4561"
+       xlink:href="dan_allen.jpg"
+       style="image-rendering:optimizeQuality"
+       preserveAspectRatio="none"
+       height="904.70557"
+       width="1359.1821"
+       clip-path="url(#clipPath4579)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="circle"
+     sodipodi:insensitive="true"
+     style="display:inline">
+    <rect
+       y="122.82367"
+       x="1007.1095"
+       height="35"
+       width="251.16435"
+       id="rect4614"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       id="rect4612"
+       width="182.84253"
+       height="35"
+       x="1011.7055"
+       y="161.23561" />
+    <circle
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#008cc2;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       id="path4606"
+       cx="921.74677"
+       cy="167.39803"
+       r="99.814079" />
+    <circle
+       r="80.85498"
+       cy="343.60611"
+       cx="1169.3302"
+       id="circle4610"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#008cc2;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#008cc2;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 998.54015,228.0292 107.29925,78.10219"
+       id="path4616"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     style="display:inline"
+     inkscape:label="text copy"
+     id="g4583"
+     inkscape:groupmode="layer"
+     sodipodi:insensitive="true">
+    <text
+       sodipodi:linespacing="100%"
+       id="text4585"
+       y="158.74178"
+       x="922.96259"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:100%;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:62.5px;line-height:100%;font-family:Dosis;-inkscape-font-specification:'Dosis Medium';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+         y="158.74178"
+         x="929.18817"
+         id="tspan4587"
+         sodipodi:role="line">Dan </tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:62.5px;line-height:100%;font-family:Dosis;-inkscape-font-specification:'Dosis Medium';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+         y="221.24178"
+         x="922.96259"
+         sodipodi:role="line"
+         id="tspan4608">Allen</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1106.6611"
+       y="354.94611"
+       id="text4589"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4591"
+         x="1106.6611"
+         y="354.94611"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;font-family:Dosis;-inkscape-font-specification:Dosis;fill:#ffffff;fill-opacity:1">Asciidoctor</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4593"
+       y="186.70061"
+       x="1026.3038"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:30px;font-family:Dosis;-inkscape-font-specification:'Dosis Medium';fill:#ffffff;fill-opacity:1"
+         y="186.70061"
+         x="1026.3038"
+         id="tspan4595"
+         sodipodi:role="line">@mojavelinux</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1026.4432"
+       y="148.28867"
+       id="text4597"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4599"
+         x="1026.4432"
+         y="148.28867"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:30px;font-family:Dosis;-inkscape-font-specification:'Dosis Medium';fill:#ffffff;fill-opacity:1">dan@opendevise.io</tspan></text>
+  </g>
+</svg>

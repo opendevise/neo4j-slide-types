@@ -1,0 +1,42 @@
+buildscript {
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    classpath 'com.moowork.gradle:gradle-node-plugin:0.10'
+    classpath 'com.moowork.gradle:gradle-gulp-plugin:0.10'
+  }
+}
+
+apply plugin: 'com.moowork.node'
+apply plugin: 'com.moowork.gulp'
+
+// The pattern npm_<command_name> executes an NPM command.
+node {
+  version = '0.12.7'
+  npmVersion = '2.14.0'
+  // download = true tells plugin to manage node installation; download = false tells plugin to use system node
+  download = true
+  workDir = file('.gradle/nodejs')
+}
+
+// The pattern gulp_<task_name> executes a gulp task.
+gulp {
+  bufferOutput = false
+}
+
+gulp_build.dependsOn npmInstall
+task build {}
+build.dependsOn gulp_build
+
+gulp_serve.dependsOn npmInstall
+task serve {}
+serve.dependsOn gulp_serve
+
+gulp_deploy.dependsOn npmInstall
+task deploy {}
+deploy.dependsOn gulp_deploy
+
+task gulpTasks(type: GulpTask) {
+  args = ['--tasks-simple']
+}
