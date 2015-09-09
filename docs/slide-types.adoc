@@ -37,7 +37,7 @@ It also gives the audience the sense that a narrative is coming and that it's ve
 Credentials
 
 .Definition
-A _speaker slide_ communicates information about the speaker to the audience.
+A _speaker slide_ communicates information about the speaker (or speakers) to the audience.
 
 .Suggestions
 This slide should only contain the most essential information:
@@ -418,3 +418,8 @@ image::resource-slide-2.jpg[]
 * sequence master/detail
 
 ////
+
+[appendix]
+= Credits
+
+Some of the slide types were derived or inspired from information provided in the book http://presentationpatterns.com[Presentation Patterns].
