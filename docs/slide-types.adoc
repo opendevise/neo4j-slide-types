@@ -4,7 +4,7 @@ OpenDevise_Inc.
 :toc: macro
 
 The following is a list of *proposed* slide types to help bring more structure to presentation decks and ease slide creation.
-Each type consists of a definition, recommendations and a set of concept images or design comps.
+Each type consists of a definition, recommendations and a set of design concepts (from the wild) and design comps (recommendations).
 
 toc::[]
 
