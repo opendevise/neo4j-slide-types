@@ -1,4 +1,7 @@
 = Neo4j Slide Types
+Michael Hunger <michael@neo4j.org>
+:author-handle: @mesirii 
+:author-title: Head of Spring Integration
 
 [.agenda]
 == Agenda
