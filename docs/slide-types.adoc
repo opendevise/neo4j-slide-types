@@ -11,23 +11,26 @@ toc::[]
 == Title
 
 .Definition
-A _title slide_ contains the presentation title and, optionally, the name(s) of the speaker(s).
-It's typically the opening slide in the presentation (unless there's a preshow).
+A _title slide_ introduces your presentation and sets the stage.
+It shows the presentation title and, optionally, the name(s) and associations(s) of the speaker(s).
+It's typically the opening slide in the presentation unless there's a preshow.
 
 .Motivation
-You want to use this slide not only to introduce your presentation, but also to establish a setting.
-Using a full bleed background image is the best way to define a stage, set the tone and give the presentation a unique identity.
+You want to use the title slide not only to introduce your presentation, but also to establish a setting.
 
 .Application
+Using a full bleed background image is the best way to define a stage, set the tone and give the presentation a unique identity.
+
 One way to use a background image while still retaining brand consistency is to select a background image for each topic.
 Another is to use the same image but with a different angle or perspective per topic.
 The audience will still associate the image with the brand, but you're able to get away from a boring, corporate-looking title slide.
 
-For Neo, the background image may be a character or scene from the Matrix, thus using the imagery to suggest the topic.
+For Neo, the background image may be a character or scene from the Matrix, thus using imagery to suggest the topic.
 
 .Bottom line
 A well-designed title slide (as well as speaker slide) ensures your presentation makes a great first impression.
-It also gives the audience the sense that a narrative is coming and that it's very professional.
+It also gives the audience the sense that a narrative is coming and that it's very professionally done.
+You know what they say about first impressions.
 
 //image::title-slide.jpg[]
 
