@@ -14,11 +14,11 @@ toc::[]
 A _title slide_ contains the presentation title and, optionally, the name(s) of the speaker(s).
 It's typically the opening slide in the presentation (unless there's a preshow).
 
-.Purpose
+.Motivation
 You want to use this slide not only to introduce your presentation, but also to establish a setting.
 Using a full bleed background image is the best way to define a stage, set the tone and give the presentation a unique identity.
 
-.Suggestions
+.Application
 One way to use a background image while still retaining brand consistency is to select a background image for each topic.
 Another is to use the same image but with a different angle or perspective per topic.
 The audience will still associate the image with the brand, but you're able to get away from a boring, corporate-looking title slide.
@@ -39,7 +39,7 @@ Credentials
 .Definition
 A _speaker slide_ communicates information about the speaker (or speakers) to the audience.
 
-.Suggestions
+.Application
 This slide should only contain the most essential information:
 
 * Speaker name
@@ -65,12 +65,13 @@ image::speaker-slide.jpg[]
 .Definition
 An _agenda slide_ contains a list of each major topic in the presentation, serving as the presentation's table of contents.
 
-.Suggestions
+.Motivation
 This slide can be used to set the audience's expectations.
 What can they expect to learn?
 What's not covered?
 Set up their internal progress bar so they can be prepared to take in all the information that's coming to them.
 
+.Application
 We envision this slide being generated automatically from the topic slides and, perhaps, inserted between each topic automatically to serve as a checkpoint in the presentation.
 
 .Just say "`No`" to progress bars
@@ -92,9 +93,11 @@ image::agenda-slide.jpg[]
 
 === Schedule
 
+.Definition
 A _schedule slide_ is similar to an agenda, but it incorporates time and external events, such as a coffee break or lunch.
 The content should be very high level so that the focus is on the _when_ and not the _what_.
 
+.Application
 It might help to use the familiar daily agenda-style layout (e.g., grid) to reinforce its purpose and make it easy to remember.
 For instance, think of the agenda-style layout used for a conference schedule.
 
@@ -104,12 +107,13 @@ For instance, think of the agenda-style layout used for a conference schedule.
 A _topic slide_ consists of a title (or statement) and, ideally, supporting imagery for that topic.
 Only if it truly adds value should you consider including a subtopic as well, but make it subtle (e.g., subtext).
 
-.Suggestions
+.Motivation
 These slides identify the presentation "`chapters`" and likely map back to an entry on the _agenda slide_.
-Each topic slide will use one of several predefined layouts and either the same image throughout the presentation or an image per topic.
-
 A topic slide helps transition from one topic to another.
 It also gives the audience a short break, let's them come up for air and prepare their brains to start learning something new.
+
+.Application
+Each topic slide will use one of several predefined layouts and either the same image throughout the presentation or an image per topic.
 
 A good way to break up the monotony and rigidity of plain topics is to replace it with a question instead.
 You are likely introducing a topic to answer a question or address a need.
@@ -129,13 +133,15 @@ image::topic-slide-3.jpg[]
 
 == Statement
 
+// IDEA: include hashtag in statement as a way to emphasize and promote a theme
+
 .Also known as
 Question, Advice
 
 .Definition
 A _statement slide_ reinforces the central point, takeaway or crux of a longer explanation or makes a transition (rising action) from one point to another.
 
-.Suggestions
+.Application
 Since a statement slide is all about the words, you should leverage typography to its full extent to turn the words into imagery (see http://www.smashingmagazine.com/2012/06/subtle-typographic-choices-make-difference/[When Subtle Typographic Choices Make All The Difference] and http://www.smashingmagazine.com/2012/04/when-typography-speaks-louder-than-words/[When Typography Speaks Louder Than Words]).
 The words should be big and bold or otherwise stand out.
 A display font works best here.
@@ -157,10 +163,13 @@ A _subject slide_ communicates the current subject (proper noun) of discussion.
 It may be a photo of a person or place or another visual identifier (e.g., a logo).
 If necessary, a caption can be added to explicitly label the subject, but it's most effective if the image can stand alone.
 
-.Suggestions
+.Application
 It's tempting to want to crowd the slide with an assortment of (random) facts about the subject in the form of bullets.
 _Don't do it!_
 You want the audience to focus on what you are saying, your message, not trying to figure out what all the facts mean and how they relate to what you're jabbering on about.
+
+.Bottom line
+Put the subject front and center to set the context and encourage the audience focus on what you are saying.
 
 image::subject-slide.jpg[]
 
@@ -169,7 +178,7 @@ image::subject-slide.jpg[]
 .Definition
 A _URL slide_ is a specialized subject slide that's main intent is to share a URL.
 
-.Suggestions
+.Application
 Whenever you share a URL, you should include a screenshot of where that URL leads so that the audience knows what to expect and are confident they found the right place when they arrive there.
 It's also easy information to digest, so it gives the audience a chance to take a small break.
 
@@ -182,7 +191,7 @@ image::url-slide.jpg[]
 .Definition
 A _definition slide_ is used to define a term and also to communicate an intent to define a new term.
 
-.Suggestions
+.Motivation
 It's easy to lose the audience when introducing new terminology.
 A definition slide gives you a chance to slow down, let the audience know that it's okay to not know the term and take the time to define it.
 
@@ -199,7 +208,7 @@ image::definition-slide.jpg[]
 .Definition
 An _exercise slide_ defines a task or challenge for the audience to complete.
 
-.Suggestions
+.Application
 The slide should not state all the details.
 It should only serve as a tickler to remind the audience of the goal at hand and provide a countdown (in minute increments at the shortest) to show when the task is expected to be completed.
 
@@ -217,7 +226,7 @@ If there are details that need to be shared, those details should be given verba
 .Definition
 An _image slide_ contains of an image and, optionally, a caption.
 
-.Suggestions
+.Application
 Unless you have reason not to, use the entire canvas to display the image.
 Images establish setting and that doesn't work if the image is boxed in.
 Focus the part of the image you really want them to look at (zoom, spotlight, focus blur).
@@ -242,7 +251,7 @@ The most common is `.background.fit`, which will fit the image to the background
 .Definition
 A _quote slide_ contains a spoken or written quote by a person or other source.
 
-.Suggestions
+.Application
 The quotation is the focus of the slide and should be the only thing on the slide, or at least, stand out as much as possible.
 If the quote is long, excerpts in the quote should be emphasized or highlighted.
 
@@ -290,7 +299,7 @@ Source, Example
 .Definition
 A _code slide_ contains sample source code along with zero or more callouts.
 
-.Suggestions
+.Application
 Code is very meaningful to the Neo audience and thus should be given the maximum attention on the slide.
 That means the code should be centered, take up as much space on the slide as possible and be displayed in a large, readable font.
 Syntax highlighting should be used when it helps increase the contrast of the keywords or makes the overall structure more readable.
@@ -311,13 +320,15 @@ image::command-slide.jpg[]
 
 == List
 
-Humans love creating lists, but audiences don't always like to receive them.
-If you must, at least try to dress it up as something other than a list and _don't use bullets_!
-Avoid using subitems at all cost.
-
+.Definition
 A _list slide_ shows a collection of unordered items.
 It may also have a title or label to introduce the list and a summary that wraps up the point or reinforces the relationship between the items.
 While it's tempting to put the label above and summary below, consider a horizontal arrangement instead.
+
+.Application
+Humans love creating lists, but audiences don't always like to receive them.
+If you must, at least try to dress it up as something other than a list and _don't use bullets_!
+Avoid using subitems at all cost.
 
 Various techniques can be used to encourage focus on the current item (i.e., one item at a time).
 These techniques include:
@@ -342,7 +353,7 @@ Ranking
 .Definition
 A _sequence slide_ is similar to a list slide except it assigns an explicit ordering to the items.
 
-.Suggestions
+.Application
 Ensure that the items really are part of a sequence and that you're not just imposing an order on them.
 
 The same techniques can be used to encourage focus on the current item.
@@ -360,7 +371,7 @@ Contrast, Juxtaposition, Division, Partition
 .Definition
 An _axis slide_ presents two or more subjects to emphasize or reinforce the distinction between them.
 
-.Suggestions
+.Application
 It might be something like a Yin and Yang or two sides of a coin.
 This type of slide usually shows the subjects with a dividing line between them.
 
@@ -370,18 +381,19 @@ image::axis-slide-2.jpg[]
 
 == Comic Relief
 
+.Definition
+A _comic relief_ slide is meant to be a small reward along the journey.
+Give the audience this reward in exchange for their attention.
+The comedy can still be tangentially related to the topic, but the focus should be on the relief, not more learning.
+
+.Motivation
 Presentations, even short ones, can be tiring.
 People can't just receive, receive, receive.
 They need breaks.
 Give your audience a chance to rest their brains every so often using a little comic relief.
 You'll find that afterwards, they'll feel refreshed and ready to get back to learning.
 
-.Definition
-A _comic relief_ slide is meant to be a small reward along the journey.
-Give the audience this reward in exchange for their attention.
-The comedy can still be tangentially related to the topic, but the focus should be on the relief, not more learning.
-
-.Suggestions
+.Application
 Animated GIFs work well here.
 A simple photo will also do.
 
@@ -395,7 +407,7 @@ Coda
 .Definition
 A _resource slide_ is a collection of links or other references at the end of a talk.
 
-.Suggestions
+.Application
 It's hard, but try not to make this look like a data dump.
 Emphasize the important part of each term and put the rest of the detail in fine print.
 
