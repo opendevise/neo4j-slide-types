@@ -23,16 +23,21 @@ You can see the result at \http://localhost:8080.
 
 === Advice for giving presentations
 
+* http://presentationpatterns.com[Presentation Patterns] - Neal Ford, Matthew McCullough, Nathaniel Schutta
 * https://medium.com/the-rectangle-behind-you/the-rectangle-behind-you-103179fcfc32[The Rectangle Behind You] (Series) - Marcin Wichary
 * https://medium.com/@jakeout/deprecate-keynote-78f0f09424dd[Deprecate Keynote] - Jake Ouellette
 * http://headrush.typepad.com/creating_passionate_users/2006/07/a_few_more_pres.html[A few more Presentation How To's] - Kathy Sierra
 * https://www.youtube.com/watch?v=W_i_DrWic88[Instantly Better Presentations] - Damian Conway
-* http://damian.conway.org/IBP.pdf[Presentation Aikido] - Damian Conway
+   - http://damian.conway.org/IBP.pdf[Handout]
 * http://frankchimero.com/writing/suggestions-for-speakers[Suggestions for Speakers] - Frank Chimero
 * http://www.bothsidesofthetable.com/2013/10/20/how-to-nail-a-presentation-to-a-crowd/[How to Nail a Presentation to a Crowd] - Mark Suster
 
-"They were just there to learn about XYZ, and, hopefully, we delivered — the software was there just to help. Which is otherwise a great way to think about any slide deck you ever do."
+"They were just there to learn about XYZ, and, hopefully, we delivered -- the software was there just to help.
+Which is otherwise a great way to think about any slide deck you ever do."
 -- Marcin Wichary
+
+"You _really_ don't need your corporate logo on every slide."
+-- Damian Conway
 
 === Reference presentations
 
