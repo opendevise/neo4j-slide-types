@@ -366,6 +366,24 @@ Instead, you can use intermediary slides to reinforce a point before moving on t
 
 image::sequence-slide.jpg[]
 
+=== Timeline
+
+.Definition
+A _timeline slide_ presents a sequence of items that are related by time (e.g., events), typically in a visual way.
+
+.Motivation
+You can use the element of time to move a story forward by pointing out what has happened or what will happen and when.
+A timeline is particularly good at showing acceleration or deceleration.
+
+.Application
+The whole point of explaining when things happened (or when they will happen) is to give the audience an impression of where those events falls on the timeline.
+If you present a sequence of events as a list, you put the burden on the audience to conceptualize the relationship between those items by translating the numbers into a mention timeline.
+Don't make them do this!
+Present the sequence of events visually using a timeline chart.
+But only put the critical stuff on there because otherwise it's hard to know where to look.
+
+image::timeline-slide.jpg[]
+
 == Axis
 
 .Also known as
