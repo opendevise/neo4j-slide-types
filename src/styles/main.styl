@@ -308,15 +308,19 @@ ul
     align-items: center
     padding-bottom: 2em
     &:not(.bespoke-bullet-current)
-      min-height: 40%
+      min-height: 35%
       //transition: min-height 1s ease 0.5s, padding 1s ease 0.5s
-      transition: min-height 1s ease 0.25s, padding 1s ease 0.25s
-      padding-bottom: 1em
-      & pre.code
+      //transition: min-height 1s ease 0.25s, padding 1s ease 0.25s
+      transition: min-height 1s ease, padding 0.5s ease
+      padding-bottom: 1.2em
+      .label
+        opacity: 0
+        transition: opacity 0.5s ease
+      pre.code
         //font-size: 1.2em
         line-height: 1.4
         opacity: 0.85
-        transition: line-height 0.2s ease-in, font-size 0.2s ease-in, opacity 0.2s ease-in
+        transition: line-height 0.5s ease, opacity 0.5s ease
         overflow: hidden
   pre.code
     font-family: mplus-1m, monospace
