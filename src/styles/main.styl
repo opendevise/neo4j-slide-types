@@ -309,28 +309,31 @@ ul
     padding-bottom: 2em
     &:not(.bespoke-bullet-current)
       min-height: 40%
-      transition: min-height 1s ease 0.5s, padding 1s ease 0.5s
+      //transition: min-height 1s ease 0.5s, padding 1s ease 0.5s
+      transition: min-height 1s ease 0.25s, padding 1s ease 0.25s
       padding-bottom: 1em
       & pre.code
         font-size: 1.2em
-        line-height: 1.5
-        transition: line-height 0.4s ease-out, font-size 0.4s ease-out
+        line-height: 1.4
+        //transition: line-height 0.4s ease-out, font-size 0.4s ease-out
+        transition: line-height 0.2s ease-in, font-size 0.2s ease-in
         overflow: hidden
   pre.code
-    font-family: Dosis
-    font-weight: 300
-    font-size: 1.5em
+    font-family: mplus-1m, monospace
+    font-weight: 500
+    font-size: 1.3em
     line-height: 1.6
     margin: 0
-    color: white
+    color: rgba(255,255,255,0.95)
     // Flexbox likes to cause scrollbars when we don't need them
     overflow: hidden
     .keyword, .function
-      font-weight: 400
+      //font-weight: 400
+      font-weight: 700
     .keyword
       color: #a0ff7c
     .function
-      color: rgba(255,255,255,.55)
+      color: #ffffff
   .label
     position: absolute
     top: 1.5ex
@@ -345,8 +348,11 @@ ul
     line-height: 1
     font-size: 0.9em
   pre.result
-    line-height: 1.4
-    font-size: 1.1em
+    font-family: mplus-1m, monospace
+    font-size: 1.3em
+    line-height: 1.5
+    //line-height: 1.4
+    //font-size: 1.1em
     color: #303030
     margin: 0
     padding: 1em 1em 0 1em

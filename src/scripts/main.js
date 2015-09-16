@@ -1,7 +1,6 @@
 var bespoke = require('bespoke'),
   classes = require('bespoke-classes'),
-  keys = require('bespoke-keys'),
-  touch = require('bespoke-touch'),
+  nav = require('bespoke-nav'),
   //fullscreen = require('bespoke-fullscreen'),
   backdrop = require('bespoke-backdrop'),
   scale = require('bespoke-scale'),
@@ -12,8 +11,7 @@ var bespoke = require('bespoke'),
 
 bespoke.from('.deck', [
   classes(),
-  keys(),
-  touch(),
+  nav(),
   //fullscreen(),
   backdrop(),
   scale(),

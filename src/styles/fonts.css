@@ -1,1 +1,15 @@
 @import url(http://fonts.googleapis.com/css?family=Dosis:400,300,500,600,700|Roboto+Condensed:400,300,300italic,400italic,700,700italic|Vollkorn:400,700,400italic,700italic);
+
+@font-face {
+  font-family: "mplus-1m";
+  font-style: bold;
+  font-weight: 700;
+  src: url(../fonts/mplus-1m-regular.ttf);
+}
+
+@font-face {
+  font-family: "mplus-1m";
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/mplus-1m-light.ttf);
+}
