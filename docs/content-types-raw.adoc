@@ -1,0 +1,49 @@
+= Raw Content Types
+
+. Presentation title
+. Agenda
+  - builds on each use
+. Topic (anchor, transition)
+  - text
+  - image (immersive)
+  - supporting icon / image
+  - image (background) + text
+  - UX idea: screen blackout shows current topic
+  - UX idea: return to topic slide when you don't have a slide to show
+  - subtopic?
+. Term (single word in center of screen)
+. Proper noun subject
+. Image
+  - immersive (full screen / full bleed)
+  - cover (overflow) with transition effect (subtle motion)
+  - progressive (relates to workflow; SVG ideal for this)
+  - with caption / title / statement(s); placement is important!
+    ** title could show up as overlay, then fade away
+  - node drawings lend themselves well to an SVG animation
+. Diagram / chart
+  - with drill down
+. Video
+  - poster bookends
+  - use as secondary character on stage
+  - use as lead-in
+  - loop (could be a modifier or the primary focus)
+. Quote / Tweet
+  - cite image (gives it emotion / connection)
+  - cite author
+  - source
+  - excerpt / callout
+. Source code
+  - with result (could be a visualization)
+  - exmphasize line(s)
+  - UX idea: immersive code, no borders, etc
+. Definition
+. Inventory (unordered list)
+  - fragments (fragments on anchor slide, like an agenda)
+  - scatter
+  - columns
+  - fill / expand
+  - stacked (e.g., images); transition is focused on revealing next image, not advancing slides
+. Ranking of items (ordered list)
+. Workflow / control flow
+  - pathways
+. Compare / contrast
