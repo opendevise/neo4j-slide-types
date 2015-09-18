@@ -6,9 +6,17 @@ OpenDevise_Inc.
 The following is a list of *proposed* slide types to help bring more structure to presentation decks and ease slide creation.
 Each type consists of a definition, recommendations and a set of design concepts (from the wild) and design comps (recommendations).
 
+Keep in mind that no slide type has to be a single physical slide.
+Don't make the slide the unit of thought.
+Instead, elaborate using as many slides as necessary to represent the point you want to make.
+Slides are cheap.
+
 toc::[]
 
 == Title
+
+.Also known as
+Bookend
 
 .Definition
 A _title slide_ introduces your presentation and sets the stage.
@@ -313,7 +321,7 @@ image::quote-slide-2.jpg[]
 === Dialogue
 
 .Also known as
-Conversation
+Conversation, Greek Chorus
 
 .Definition
 A _dialogue slide_ is similar to a quote slide except there is more than one "`voice`" being represented.
@@ -478,7 +486,7 @@ image::resource-slide-2.jpg[]
 
 == Other ideas
 
-* transition / flash
+* explain Why? and the Narrative Arc at the beginning
 * sequence master/detail
 ////
 
