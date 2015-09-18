@@ -65,6 +65,9 @@ image::speaker-slide.jpg[]
 
 == Agenda
 
+.Also known as
+Context Keeper
+
 .Definition
 An _agenda slide_ contains a list of each major topic in the presentation, serving as the presentation's table of contents.
 
@@ -133,6 +136,34 @@ image::topic-slide-2.jpg[]
 image::topic-slide-breadcrumbs.jpg[]
 
 image::topic-slide-3.jpg[]
+
+== Transition
+
+.Also known as
+Intermezzo
+
+.Definition
+A _transition slide_ helps shift from one topic to another smoothly.
+It helps communicate that the previous topic is wrapped up (hopefully neatly) and that a new topic is being introduced.
+The transition also provides a good opportunity to check in with the audience to see how they are doing and answer questions, if time permits.
+
+.Application
+You don't want your presentations to have any sharp edges.
+Sometimes, one topic naturally flows into another, so there's no need for an explicit transition.
+However, if you have to make a sharp turn, it's best to pad it with a transition slide to give the audience a chance to let go of the previous topic and get ready to take on the new material.
+
+You also want to remind the audience where they've been and where they are headed.
+You could use the transition slide to wrap up the point of the previous section.
+Damian Conway likes to use this slide to summarize the points of the previous section and give the audience a chance to ask questions about it.
+This reflection is an important device in getting the information to sink in.
+
+One way to slip in a transition subtly is to pose a new question.
+Questions are a great way to get the audience to focus on a new problem without calling it out explicitly.
+In other words, it's a brain hack.
+
+.Bottom line
+Use a transition slide when you can't find another way to shift from the previous topic to the next.
+If the content transitions naturally, then skip the transition slide because it may have the opposite affect.
 
 == Statement
 
@@ -449,7 +480,6 @@ image::resource-slide-2.jpg[]
 
 * transition / flash
 * sequence master/detail
-
 ////
 
 [appendix]
