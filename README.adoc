@@ -28,12 +28,13 @@ See the <<docs/slide-types#,Neo4j Slide Types>> catalog (in progress) for a list
 
 === Advice for giving presentations
 
-* http://presentationpatterns.com[Presentation Patterns] - Neal Ford, Matthew McCullough, Nathaniel Schutta
+* http://presentationpatterns.com[Presentation Patterns] - Neal Ford, Matthew McCullough, Nathaniel Schutta <- [.green]_Highly recommended!_
+* http://resonate.duarte.com[Resonate] (available online) - Nancy Duarte -< [green]_Also highly recommended!_
+* https://www.youtube.com/watch?v=W_i_DrWic88[Instantly Better Presentations] - Damian Conway <- [red]_Must see!_
+   - http://damian.conway.org/IBP.pdf[Handout]
 * https://medium.com/the-rectangle-behind-you/the-rectangle-behind-you-103179fcfc32[The Rectangle Behind You] (Series) - Marcin Wichary
 * https://medium.com/@jakeout/deprecate-keynote-78f0f09424dd[Deprecate Keynote] - Jake Ouellette
 * http://headrush.typepad.com/creating_passionate_users/2006/07/a_few_more_pres.html[A few more Presentation How To's] - Kathy Sierra
-* https://www.youtube.com/watch?v=W_i_DrWic88[Instantly Better Presentations] - Damian Conway
-   - http://damian.conway.org/IBP.pdf[Handout]
 * http://frankchimero.com/writing/suggestions-for-speakers[Suggestions for Speakers] - Frank Chimero
 * http://www.bothsidesofthetable.com/2013/10/20/how-to-nail-a-presentation-to-a-crowd/[How to Nail a Presentation to a Crowd] - Mark Suster
 
@@ -55,6 +56,7 @@ The following presentations are either good examples or exhibit bright spots.
 
 === Photo archives
 
+* https://www.flickr.com/photos/usinterior/favorites
+* https://www.flickr.com/groups/rnmpco/pool/
 * http://mypubliclands.tumblr.com/
 * https://www.flickr.com/photos/mypubliclands
-* https://www.flickr.com/photos/usinterior/favorites
