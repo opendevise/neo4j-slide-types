@@ -1,20 +1,23 @@
+var isWebKit = 'webkitAppearance' in document.documentElement.style;
 var bespoke = require('bespoke'),
-  classes = require('bespoke-classes'),
-  nav = require('bespoke-nav'),
-  //fullscreen = require('bespoke-fullscreen'),
   backdrop = require('bespoke-backdrop'),
-  scale = require('bespoke-scale'),
-  overview = require('bespoke-overview'),
   bullets = require('bespoke-bullets'),
+  classes = require('bespoke-classes'),
+  cursor = require('bespoke-cursor'),
+  forms = require('bespoke-forms'),
+  //fullscreen = require('bespoke-fullscreen'),
   hash = require('bespoke-hash'),
-  forms = require('bespoke-forms');
+  nav = require('bespoke-nav'),
+  overview = require('bespoke-overview'),
+  scale = require('bespoke-scale');
 
 bespoke.from('.deck', [
   classes(),
+  cursor(),
   nav(),
   //fullscreen(),
   backdrop(),
-  scale(),
+  scale(isWebKit ? 'zoom' : 'transform'),
   overview(),
   bullets('li, .bullet'),
   hash(),
