@@ -441,6 +441,9 @@ image::axis-slide-2.jpg[]
 
 == Comic Relief
 
+.Also known as
+Brain Break
+
 .Definition
 A _comic relief_ slide is meant to be a small reward along the journey.
 Give the audience this reward in exchange for their attention.
@@ -450,6 +453,10 @@ The comedy can still be tangentially related to the topic, but the focus should 
 Presentations, even short ones, can be tiring.
 People can't just receive, receive, receive.
 They need breaks.
+
+Studies show that an adult's attention span is roughly 20 minutes.
+With a short break, a little effort and some motivation, a person can refresh his/her attention span--but only _if_ given the opportunity.
+
 Give your audience a chance to rest their brains every so often using a little comic relief.
 You'll find that afterwards, they'll feel refreshed and ready to get back to learning.
 
