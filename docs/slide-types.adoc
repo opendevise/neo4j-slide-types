@@ -352,11 +352,18 @@ Consider breaking from the traditional top-down flow and put callouts above and 
 
 A code slide may be cause and effect (e.g., a query and its results) or an anatomy (e.g., a code listing that you examine and/or explain).
 
+.Focus techniques
+* Incremental
+* Traveling highlights (aka Emphasis)
+* Lightbox (aka Crawling Code)
+
 .Bottom line
 Avoid the temptation of cramming numerous examples on a single slide.
 Progress the audience gradually by giving each distinct code snippet its own slide.
 
-image::code-slide.jpg[]
+image::code-slide-highlight-and-callout.jpg[]
+
+image::code-slide-lightbox.jpg[]
 
 image::command-slide.jpg[]
 
