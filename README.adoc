@@ -34,6 +34,7 @@ See the <<docs/slide-types#,Neo4j Slide Types>> catalog (in progress) for a list
 * icon:youtube-play[role=red,alt=Video] https://www.youtube.com/watch?v=W_i_DrWic88[Instantly Better Presentations] - Damian Conway <- [blue]_Must see!_
    - icon:file-pdf-o[role=red,alt=PDF] http://damian.conway.org/IBP.pdf[Instantly Better Presentations - Handout]
 * https://medium.com/the-rectangle-behind-you/the-rectangle-behind-you-103179fcfc32[The Rectangle Behind You] (Series) - Marcin Wichary
+* http://trainingintheopen.com/speaker-training[Training in the Open] - Emma Jane Hogbin Westby
 * http://www.bothsidesofthetable.com/2013/10/20/how-to-nail-a-presentation-to-a-crowd[How to Nail a Group Presentation] - Mark Suster
 * http://www.inc.com/sims-wyeth/7-ways-to-break-bad-public-speaking-habits.html[7 Ways to Break Bad Speaking Habits] - Sims Wyeth
 * https://medium.com/@jakeout/deprecate-keynote-78f0f09424dd[Deprecate Keynote] - Jake Ouellette
