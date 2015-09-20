@@ -1,4 +1,5 @@
 = Neo4j Slide Types
+ifndef::env-github[:icons: font]
 ifdef::env-github[:outfilesuffix: .adoc]
 
 A http://markdalgleish.com/projects/bespoke.js[Bespoke.js] presentation that identifies unique slide types for use in Neo4j presentations.
@@ -28,15 +29,16 @@ See the <<docs/slide-types#,Neo4j Slide Types>> catalog (in progress) for a list
 
 === Advice for giving presentations
 
-* http://presentationpatterns.com[Presentation Patterns] - Neal Ford, Matthew McCullough, Nathaniel Schutta <- [.green]_Highly recommended!_
-* http://resonate.duarte.com[Resonate] (available online) - Nancy Duarte -< [green]_Also highly recommended!_
-* https://www.youtube.com/watch?v=W_i_DrWic88[Instantly Better Presentations] - Damian Conway <- [red]_Must see!_
-   - http://damian.conway.org/IBP.pdf[Handout]
+* icon:book[role=black,alt=Book] http://presentationpatterns.com[Presentation Patterns] - Neal Ford, Matthew McCullough, Nathaniel Schutta <- [.green]_Highly recommended!_
+* icon:globe[role=blue,alt=Online] icon:book[role=black,alt=Book] http://resonate.duarte.com[Resonate] - Nancy Duarte <- [green]_Also highly recommended!_
+* icon:youtube-play[role=red,alt=Video] https://www.youtube.com/watch?v=W_i_DrWic88[Instantly Better Presentations] - Damian Conway <- [blue]_Must see!_
+   - icon:file-pdf-o[role=red,alt=PDF] http://damian.conway.org/IBP.pdf[Instantly Better Presentations - Handout]
 * https://medium.com/the-rectangle-behind-you/the-rectangle-behind-you-103179fcfc32[The Rectangle Behind You] (Series) - Marcin Wichary
+* http://www.bothsidesofthetable.com/2013/10/20/how-to-nail-a-presentation-to-a-crowd[How to Nail a Group Presentation] - Mark Suster
+* http://www.inc.com/sims-wyeth/7-ways-to-break-bad-public-speaking-habits.html[7 Ways to Break Bad Speaking Habits] - Sims Wyeth
 * https://medium.com/@jakeout/deprecate-keynote-78f0f09424dd[Deprecate Keynote] - Jake Ouellette
-* http://headrush.typepad.com/creating_passionate_users/2006/07/a_few_more_pres.html[A few more Presentation How To's] - Kathy Sierra
+* http://headrush.typepad.com/creating_passionate_users/2006/07/a_few_more_pres.html[A Few More Presentation How To's] - Kathy Sierra
 * http://frankchimero.com/writing/suggestions-for-speakers[Suggestions for Speakers] - Frank Chimero
-* http://www.bothsidesofthetable.com/2013/10/20/how-to-nail-a-presentation-to-a-crowd/[How to Nail a Presentation to a Crowd] - Mark Suster
 
 "They were just there to learn about XYZ, and, hopefully, we delivered -- the software was there just to help.
 Which is otherwise a great way to think about any slide deck you ever do."
@@ -44,6 +46,10 @@ Which is otherwise a great way to think about any slide deck you ever do."
 
 "You _really_ don't need your corporate logo on every slide."
 -- Damian Conway
+
+=== Other essential background
+
+* http://robbgrindstaff.com/2012/03/narrative-arc-what-the-heck-is-it/[Narrative Arc: What the heck is it?]
 
 === Reference presentations
 
