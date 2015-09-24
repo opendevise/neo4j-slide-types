@@ -7,7 +7,7 @@ The following is a list of *proposed* slide types to help bring more structure t
 Each type consists of a definition, recommendations and a set of design concepts (from the wild) and design comps (recommendations).
 
 Keep in mind that no slide type has to be a single physical slide.
-Don't make the slide the unit of thought.
+*Don't make the slide the unit of thought.*
 Instead, elaborate using as many slides as necessary to represent the point you want to make.
 Slides are cheap.
 
@@ -281,6 +281,10 @@ Another is to put a layer mask on one half of the image (vertical or horizontal)
 If you are going to add a caption, consider showing the image first then adding the caption after they've soaked it up.
 This not only helps layer / unfold the story, it gives them one thing to comprehend at a time.
 
+When there's a complex image, such as a diagram or chart, consider showing the full image, then masking parts of it to focus on different areas.
+You can even mix the masking and a list to give the list context while dually explaining one part of the image.
+When you reveal the whole image again at the end, the audience will feel like they understand it completely and will be ready to move on.
+
 .AsciiDoc syntax
 The image is specified using a block image macro.
 The caption is specified either as the section title or the block title, which may affect how it gets displayed.
@@ -353,7 +357,7 @@ Consider breaking from the traditional top-down flow and put callouts above and 
 A code slide may be cause and effect (e.g., a query and its results) or an anatomy (e.g., a code listing that you examine and/or explain).
 
 .Focus techniques
-* Incremental
+* Emergence
 * Traveling highlights (aka Emphasis)
 * Lightbox (aka Crawling Code)
 
