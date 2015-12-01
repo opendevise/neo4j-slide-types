@@ -11,6 +11,12 @@ Keep in mind that no slide type has to be a single physical slide.
 Instead, elaborate using as many slides as necessary to represent the point you want to make.
 Slides are cheap.
 
+And always keep this quote from Resonate in mind when creating slides:
+
+"Any slides you use during your presentation should serve as a stage-setting or backdrop;
+they should rarely be the sole focus for the message."
+-- Resonate
+
 toc::[]
 
 == Title
