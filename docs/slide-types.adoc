@@ -475,6 +475,13 @@ You'll find that afterwards, they'll feel refreshed and ready to get back to lea
 Animated GIFs work well here.
 A simple photo will also do.
 
+WARNING: Use animated gifs sparingly!!
+More than a few can be downright distracting, annoying or hypnotic.
+And never try to say anything important when an animated gif is on the screen.
+The audience simply won't hear you.
+You can't talk over an animated gif.
+It's meant to be a distraction, so let it be one...as a _break._
+
 image::comic-relief-slide.jpg[]
 
 == Resources
