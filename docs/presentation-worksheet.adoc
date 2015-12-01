@@ -1,0 +1,89 @@
+= Presentation Worksheet
+OpenDevise_Inc.
+
+== Step 1: The Why
+
+In a few sentences, explain why you are giving this presentation.
+
+Why are you getting on a plane, traveling to another city, getting up on stage and talking to an audience?
+In what way do you want to change their minds?
+What journey do you want to take them on?
+What do you want them to walk away with?
+What do you want them to value more because they attended this talk?
+
+This is not an abstract, it's a justification and a set of goals.
+
+== Step 2: Brain dump
+
+In a plain text file, one thought per line (no bullets), write down everything that comes to mind about this topic.
+
+Record points you want to make, supporting quotes, concepts, terms and definitions, ideas for visuals, etc.
+Most lines should be less than a screen width.
+Resist writing complete sentences or paragraphs.
+The lines should read more like bullet points.
+
+For a 60 minute presentation, you should have roughly 150-200 lines, though even more is better.
+
+Key reference:: https://www.youtube.com/watch?v=W_i_DrWic88&t=1816[Instantly Better Presentations (Suggestion #3)]
+
+//Example:: ...
+
+== Step 3: Identify the big ideas
+
+Make a print out the brain dump document and circle the lines that represent the most important points--the big ideas.
+In the original document, make section titles for each of these points and organize the remaining lines under these sections.
+Throw out any lines that don't fit in these big ideas.
+
+The key to this stage is to let the content speak for itself.
+It helps to work with another person at this stage.
+You will recognize a big idea when you see it.
+When you do, flag it.
+Make notations in the margins of additional ideas that you missed.
+Draw lines between duplicate ideas.
+Make lines all over the place.
+This is your chance to allow the structure of the presentation to emerge.
+
+Back in the original document, sort the big ideas in the order that builds up the most tension then resolves it.
+Leverage contrast as much as possible.
+Contrast is what keeps the audience engaged and makes them remember what you want to communicate.
+
+Key reference:: http://resonate.duarte.com/#!page114[Resonate (Create Meaningful Content)]
+
+== Step 4: Write a narrative
+
+Use the big ideas to construct a written narrative of your presentation.
+Tell a story using the big ideas as the star moments.
+
+Slides are meant to be a visual for a story.
+If you don't have a story, you aren't ready to create slides.
+Write down a transcript of what you are going to say throughout the presentation.
+Even if you improvise on the stage, this transcript provides the backbone for your presentation.
+It keeps you on track and ensures that you arrive at a point by the end (if not sooner).
+
+Don't leave anything out that you want to say.
+Otherwise, you aren't ready to get on stage.
+Write in the style that you are going to speak so that you can actually use this transcript as a guide.
+Read the sentences outloud to make sure they sound natural.
+
+Once you are done, time yourself reading the transcript and make sure it fits within the alotted time for the presentation.
+If you can't read it through in the time you have for the presentation, you'll never be able to present it in that time.
+Also use this as an opportunity to cut parts of the transcript that don't flow.
+
+Example:: http://mojavelinux.github.io/presentation-grow-open-source/transcript.html[Everything You Need to Know to Grow Open Source (Transcript)]
+
+== Step 5: Make supporting visuals
+
+Describe visuals that will help support the transcript.
+These can be messy.
+They are placeholders for the designer (perhaps you with your design hat on) to convert into engaging slides.
+
+Once you have a transcript, it should be obvious where you need visuals to support it.
+You'll have the instinct to point to an example or a picture to help the audience follow your point.
+Use that instinct to work out what visual you need.
+The visuals should fit the transcript, not the other way around.
+
+Even the roughest slides will work, so long as they don't draw too much attention away from the speaker.
+Use the slides merely to set the stage or to give the audience a reference point for what you are talking about.
+You'll find that the slides can be much, much less dense once you have that narrative in place to form the foundation.
+
+Example:: http://mojavelinux.github.io/presentation-write-fluently[7 Ways to Hack Your Brain to Write Fluently (Slides)]
