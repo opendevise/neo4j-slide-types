@@ -80,16 +80,16 @@ Example:: http://mojavelinux.github.io/presentation-grow-open-source/transcript.
 
 Describe visuals that will help support the transcript.
 These can be messy.
-They are placeholders for the designer (perhaps you with your design hat on) to convert into engaging slides.
+They are placeholders for the designer (perhaps you later with your design hat on) to convert into engaging slides.
 
 Once you have a transcript, it should be obvious where you need visuals to support it.
 You'll have the instinct to point to an example or a picture to help the audience follow your point.
 Use that instinct to work out what visual you need.
 The visuals should fit the transcript, not the other way around.
 
-Even the roughest slides will work, so long as they don't draw too much attention away from the speaker.
+Even simple slides will work, as long as they don't draw too much attention away from the speaker.
 Use the slides merely to set the stage or to give the audience a reference point for what you are talking about.
-You'll find that the slides can be much, much less dense once you have that narrative in place to form the foundation.
+You'll find that the slides can be much, _much_ less dense once you have that narrative in place to form the foundation.
 The text on each slide should only be the key point you want to make for that idea.
 
 Example:: http://mojavelinux.github.io/presentation-write-fluently[7 Ways to Hack Your Brain to Write Fluently (Slides)]
