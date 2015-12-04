@@ -4,6 +4,7 @@ OpenDevise_Inc.
 == Step 1: The Why
 
 In a few sentences, explain why you are giving this presentation.
+Focus on outcomes.
 
 Why are you getting on a plane, traveling to another city, getting up on stage and talking to an audience?
 In what way do you want to change their minds?
@@ -13,7 +14,7 @@ What do you want them to value more because they attended this talk?
 
 This is not an abstract, it's a justification and a set of goals.
 
-== Step 2: Brain dump
+== Step 2: Brain offload
 
 In a plain text file, one thought per line (no bullets), write down everything that comes to mind about this topic.
 
@@ -30,7 +31,7 @@ Key reference:: https://www.youtube.com/watch?v=W_i_DrWic88&t=1816[Instantly Bet
 
 == Step 3: Identify the big ideas
 
-Make a print out the brain dump document and circle the lines that represent the most important points--the big ideas.
+Make a print out the brain offload document and circle the lines that represent the most important points--the big ideas.
 In the original document, make section titles for each of these points and organize the remaining lines under these sections.
 Throw out any lines that don't fit in these big ideas.
 
@@ -62,12 +63,15 @@ It keeps you on track and ensures that you arrive at a point by the end (if not 
 
 Don't leave anything out that you want to say.
 Otherwise, you aren't ready to get on stage.
+(Use comments to weave in new ideas that don't yet fit into the flow).
 Write in the style that you are going to speak so that you can actually use this transcript as a guide.
 Read the sentences outloud to make sure they sound natural.
 
 Once you are done, time yourself reading the transcript and make sure it fits within the alotted time for the presentation.
 If you can't read it through in the time you have for the presentation, you'll never be able to present it in that time.
 Also use this as an opportunity to cut parts of the transcript that don't flow.
+
+TIP: You can use the outcome of this step as the input for a blog post to promote your talk and get feedback on your ideas.
 
 Example:: http://mojavelinux.github.io/presentation-grow-open-source/transcript.html[Everything You Need to Know to Grow Open Source (Transcript)]
 
@@ -85,5 +89,11 @@ The visuals should fit the transcript, not the other way around.
 Even the roughest slides will work, so long as they don't draw too much attention away from the speaker.
 Use the slides merely to set the stage or to give the audience a reference point for what you are talking about.
 You'll find that the slides can be much, much less dense once you have that narrative in place to form the foundation.
+The text on each slide should only be the key point you want to make for that idea.
 
 Example:: http://mojavelinux.github.io/presentation-write-fluently[7 Ways to Hack Your Brain to Write Fluently (Slides)]
+
+[appendix]
+== Resources
+
+* http://www.trainingintheopen.com/speakers-checklist.html[Training in the Open: Speaker Checklist]
