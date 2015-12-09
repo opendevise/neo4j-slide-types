@@ -1,14 +1,14 @@
 = Presentation Worksheet
 OpenDevise_Inc.
 
-== Step 1: The Why / Know Your Audience
+== Step 1: The Why & Know Your Audience
 
 In a few sentences, explain *why* you are giving this presentation and *to whom*.
 
 What business goal or goals will your presentation help you achieve?
 
 Who is your target audience?
-Why are they the right people to address?
+Why are these the right people to address?
 
 Picture yourself giving the presentation.
 What emotions do you want your audience to feel?
