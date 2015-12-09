@@ -1,6 +1,14 @@
 = Presentation Worksheet
 OpenDevise_Inc.
 
+== Step 0: Choose a Topic
+
+Choose a topic and write an abstract.
+The abstract is for the audience.
+Tell them what to expect to learn from the presentation.
+
+Once you've created an abtract, you may think of a creative title, but don't be afraid to change either the title or the abstract as you clarify your thinking in the process of completing this worksheet.
+
 == Step 1: The Why & Know Your Audience
 
 In a few sentences, explain *why* you are giving this presentation and *to whom*.
