@@ -1,18 +1,38 @@
 = Presentation Worksheet
 OpenDevise_Inc.
 
-== Step 1: The Why
+== Step 1: The Why / Know Your Audience
 
-In a few sentences, explain why you are giving this presentation.
-Focus on outcomes.
+In a few sentences, explain *why* you are giving this presentation and *to whom*.
 
-Why are you getting on a plane, traveling to another city, getting up on stage and talking to an audience?
-In what way do you want to change their minds?
-What journey do you want to take them on?
-What do you want them to walk away with?
-What do you want them to value more because they attended this talk?
+What business goal or goals will your presentation help you achieve?
 
-This is not an abstract, it's a justification and a set of goals.
+Who is your target audience?
+Why are they the right people to address?
+
+Picture yourself giving the presentation.
+What emotions do you want your audience to feel?
+Why are these emotions useful?
+
+Now imagine the moment when you finish the presentation.
+What do you want your audience to be thinking?
+How is this different from what they were thinking before your presentation?
+How have you changed their minds?
+
+What actions do you want your audience to take...
+
+* during your presentation?
+* immediately following your presentation? 
+* one week after your presentation?
+* one month after your presentation?
+
+NOTE: This is not an abstract.
+An abstract tells the audience what to expect.
+This is a justification as to why you are going through the whole ordeal of addressing an audience.
+//You must have a goal.
+If you're getting on a plane, traveling to another city, getting up on stage and speaking to an audience, there must be a reason.
+Find it.
+//Commit to it.
 
 == Step 2: Brain offload
 
