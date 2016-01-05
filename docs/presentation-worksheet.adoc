@@ -77,6 +77,9 @@ Back in the original document, sort the big ideas in the order that builds up th
 Leverage contrast as much as possible.
 Contrast is what keeps the audience engaged and makes them remember what you want to communicate.
 
+TIP: To help identify the big ideas, try writing quiz questions for what you want the audience to know.
+This helps you understand the point you are trying to make and to be more clear in making it.
+
 Key reference:: http://resonate.duarte.com/#!page114[Resonate (Create Meaningful Content)]
 
 == Step 4: Write a narrative
