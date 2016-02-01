@@ -41,6 +41,7 @@ See the <<docs/slide-types#,Neo4j Slide Types>> catalog (in progress) for a list
 * http://headrush.typepad.com/creating_passionate_users/2006/07/a_few_more_pres.html[A Few More Presentation How To's] - Kathy Sierra
 * http://frankchimero.com/writing/suggestions-for-speakers[Suggestions for Speakers] - Frank Chimero
 * http://www.ted.com/talks/andrew_stanton_the_clues_to_a_great_story[The Clues to a Great Story] - Andrew Stanton
+* https://pitchdeck.improvepresentation.com/what-is-a-pitch-deck[What is a pitch deck]
 
 "They were just there to learn about XYZ, and, hopefully, we delivered -- the software was there just to help.
 Which is otherwise a great way to think about any slide deck you ever do."
@@ -53,6 +54,13 @@ Which is otherwise a great way to think about any slide deck you ever do."
 
 * http://robbgrindstaff.com/2012/03/narrative-arc-what-the-heck-is-it/[Narrative Arc: What the heck is it?]
 
+=== Terminology
+
+stagedeck:: A presentation that is designed to projected and delivered to an audience (i.e., on stage).
+Opposite of an http://presentationpatterns.com/glossary/#infodeck[infodeck].
+
+See the http://presentationpatterns.com/glossary/[Presentation Patterns glossary] for other defined terminology.
+
 === Reference presentations
 
 The following presentations are either good examples or exhibit bright spots.
@@ -64,7 +72,13 @@ The following presentations are either good examples or exhibit bright spots.
 
 === Photo archives
 
+* http://unspash.com
+* http://finda.photo
 * https://www.flickr.com/photos/usinterior/favorites
 * https://www.flickr.com/groups/rnmpco/pool/
 * http://mypubliclands.tumblr.com/
 * https://www.flickr.com/photos/mypubliclands
+
+=== Design tools
+
+* http://app.programmingfonts.org[Programming Fonts Tester]
