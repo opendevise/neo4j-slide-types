@@ -1,11 +1,14 @@
 = Neo4j Slide Types
 Michael Hunger <michael@neo4j.org>
-:author-handle: @mesirii 
-:author-title: Head of Spring Integration
+:avatar: michael-hunger.jpg
+:organization: Neo Technology
+:position: Head of Developer Relations
+:twitter: @mesirii 
+:imagesdir: images
+:!sectids:
 
 [.agenda]
 == Agenda
-
 * Databases are no fun
 * Relational pain -> Graph fun
 * The world is a graph
@@ -17,30 +20,24 @@ Michael Hunger <michael@neo4j.org>
 
 [.subject]
 == Spring Data Neo4j
+image::spring-data-neo4j.png[Spring Data Neo4j,300,300]
 
-image::spring-data-neo4j.png[Spring Data Neo4j]
-
-[.background.fit]
+//[.background.fit]
 == The world is a graph
+image::backdrop-mountains.jpg[Mountains,1280,720,role=cover canvas]
 
-image::backdrop-mountains.jpg[Mountains,1280,720]
-
-[.quote]
 == !
-
-"The advantage of _not_ using an aggregate structure in the database is that it allows you to slice and dice your data [underline]#different ways# for [underline]#different audiences#."
+"The advantage of _not_ using an aggregate structure in the database is that it allows you to slice and dice your data [.underline]#different ways# for [.underline]#different audiences#."
 -- Martin Fowler
 
 [.query-result]
 == Query Title Here
-
 [source,cypher]
 ----
 MATCH (h1:Hashtag)-[:TAGS]->(TWEET)<-[:TAGS]-(h2:Hashtag)
 WHERE h1.name = {hashtag}
 RETURN h1.name AS from, h2.name AS to, COUNT(*) AS value
 ----
-
 ....
 ## id      u.username  mentions
 ##  1   hadleywickham        43
