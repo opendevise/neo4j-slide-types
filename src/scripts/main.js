@@ -23,5 +23,3 @@ bespoke.from('.deck', [
   hash(),
   forms()
 ]);
-
-//require('prism');
