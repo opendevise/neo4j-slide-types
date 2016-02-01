@@ -3,8 +3,8 @@ buildscript {
     jcenter()
   }
   dependencies {
-    classpath 'com.moowork.gradle:gradle-node-plugin:0.10'
-    classpath 'com.moowork.gradle:gradle-gulp-plugin:0.10'
+    classpath 'com.moowork.gradle:gradle-node-plugin:0.11'
+    classpath 'com.moowork.gradle:gradle-gulp-plugin:0.11'
   }
 }
 
@@ -13,8 +13,8 @@ apply plugin: 'com.moowork.gulp'
 
 // The pattern npm_<command_name> executes an NPM command.
 node {
-  version = '0.12.7'
-  npmVersion = '2.14.0'
+  version = '0.12.9'
+  npmVersion = '2.14.17'
   // download = true tells plugin to manage node installation; download = false tells plugin to use system node
   download = true
   workDir = file('.gradle/nodejs')
@@ -25,6 +25,7 @@ gulp {
   bufferOutput = false
 }
 
+// QUESTION is there a way to consolidate these task definitions?
 gulp_build.dependsOn npmInstall
 task build {}
 build.dependsOn gulp_build
