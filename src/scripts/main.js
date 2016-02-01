@@ -1,5 +1,10 @@
-var isWebKit = 'webkitAppearance' in document.documentElement.style;
-var bespoke = require('bespoke'),
+var isWebKit = 'webkitAppearance' in document.documentElement.style,
+  // zoom-based scaling causes font sizes and line heights to be calculated differently
+  // on the other hand, zoom-based scaling correctly anti-aliases fonts during transforms (no need for layer creation hack)
+  scaleMethod = isWebKit ? 'zoom' : 'transform',
+  //scaleMethod = 'transform',
+  //scaleMethod = null,
+  bespoke = require('bespoke'),
   backdrop = require('bespoke-backdrop'),
   bullets = require('bespoke-bullets'),
   classes = require('bespoke-classes'),
@@ -16,9 +21,12 @@ bespoke.from('.deck', [
   nav(),
   fullscreen(),
   backdrop(),
-  scale(isWebKit ? 'zoom' : 'transform'),
+  (scaleMethod ? scale(scaleMethod) : function(deck) {}),
   overview(),
-  bullets('li, .bullet'),
-  hash(),
-  forms()
+  bullets('.build, .build-items > li'),
+  // enable cursor() to automatically hide the cursor when presenting
+  //cursor(),
+  // enable forms() if you have form elements in your slides
+  //forms(),
+  hash()
 ]);

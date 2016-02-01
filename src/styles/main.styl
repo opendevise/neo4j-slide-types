@@ -1,374 +1,391 @@
-@import 'fonts.css'
-@import 'normalizecss/normalize.css'
+@import "./variables"
+@import "./fonts.css"
+@import "normalizecss/normalize.css"
 
-*
-  box-sizing: inherit
+*, ::before, ::after { box-sizing: inherit }
 
 html
-  box-sizing: border-box
+  box-sizing border-box
+  //font-size 16px // normalize the base font size (at least during testing)
+  // NOTE quotes only work when lang is set on html element
+  quotes $sym-dblquote-left $sym-dblquote-right
+
+span.underline
+  border-bottom 1px solid #ddd
+
+aside[role=note] { display: none }
+figure { margin: 0 }
+img { vertical-align: middle }
+p { margin: 0 0 1em 0 }
 
 .deck
-  font-family: 'Roboto Condensed', sans-serif
-  color: #222222
-  text-rendering: optimizeLegibility
-  font-feature-settings: "kern" 1
-  font-kerning: normal
+  font-family 'Roboto Condensed', sans-serif
+  color $color-text
+  font-feature-settings "kern" 1
+  text-rendering optimizeLegibility
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  // hide deck and slide content until Bespoke.js classes have been added
+  &:not(.bespoke-parent), section:not(.bespoke-slide)
+    display none
 
-  &:not(.bespoke-parent),
-  section:not(.bespoke-slide)
-    display: none
-
-.bespoke-parent,
-.bespoke-scale-parent,
-.bespoke-backdrop
-  position: absolute
-  top: 0
-  left: 0
-  width: 100vw
-  height: 100vh
+.bespoke-parent, .bespoke-scale-parent, .bespoke-backdrop
+  position absolute
+  top 0
+  right 0
+  bottom 0
+  left 0
 
 .bespoke-parent
-  background-color: #111
-  overflow: hidden
+  overflow hidden // QUESTION why not on .deck?
+  background-color $color-surface // QUESTION should we add to body as well?
   & > :not(.bespoke-slide)
-    pointer-events: none
+    pointer-events none
 
 .bespoke-slide
-  opacity: 0
-  position: absolute
-  top: 50%
-  left: 50%
-  width: 640px
-  margin-left: -(@width / 2)
-  height: 360px
-  margin-top: -(@height / 2)
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
+  //overflow hidden
+  opacity 0
+  position absolute
+  top 50%
+  left 50%
+  width $slide-width
+  margin-left -(@width / 2)
+  height $slide-height
+  margin-top -(@height / 2)
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
   // NOTE currently used for transitioning between slides _and_ out of overview
-  transition: transform 0.3s ease
-  //transition: transform 0.3s ease, opacity 0.3s ease
+  transition transform 0.3s ease
+  //transition transform 0.3s ease, opacity 0.3s ease
   &:not([data-bespoke-backdrop])
-    background-color: #ffffff
+    background-color $color-canvas
   .content
-    opacity: 0
-    transition: opacity 0.3s ease
-    width: 100%
-    height: 100%
-    display: inherit
-    flex-direction: inherit
-    justify-content: inherit
-    align-items: inherit
+    opacity 0
+    transition opacity 0.3s ease
+    width 100%
+    height 100%
+    display inherit
+    flex-direction inherit
+    justify-content inherit
+    align-items inherit
 
 //.bespoke-inactive
 
 .bespoke-active
-  pointer-events: auto
-  opacity: 1
-  // Webkit requires z-index to be 1 for elements to receive focus
-  z-index: 1
+  pointer-events auto
+  opacity 1
+  z-index 1 // Webkit requires z-index to be 1 for elements to receive focus (may no longer apply)
   .content
-    opacity: 1
+    opacity 1
 
 .bespoke-bullet
-  transition: opacity 0.8s ease
-  opacity: 0
-  pointer-events: none
-  // NOTE workaround bug in Chrome resulting in a visual shift
-  -webkit-transform: rotate(0)
+  transition opacity 0.8s ease
+  opacity 0
+  pointer-events none
   &-active
-    opacity: 1
-    pointer-events: auto
+    opacity 1
+    pointer-events auto
 
-.content.agenda
-  background-color: #d4ca2e
-  background-image: url(../images/backdrop-nodes-yellow.png)
-  background-size: cover
+//.bespoke-slide.agenda
+.bespoke-slide.agenda > .content
+  background-color #d4ca2e
+  background-image url(../images/backdrop-nodes-yellow.png)
+  background-size cover
 
 ul
-  padding-left: 0
-  margin-left: 1.5ex
+  padding-left 0
+  margin-left 1.5ex
 
   &.agenda
-    font-family: Dosis, sans-serif
-    font-weight: 600
-    display: flex
-    flex-direction: column
-    justify-content: flex-end
-    font-size: 1.5em
-    border-left: 0.15em solid #e5df7c
-    margin: 0
-    // NOTE could also use align-items: flex-end on parent
-    position: absolute
-    top: 0
-    right: 0
-    padding: 0 0.5em 0 0
+    font-family Dosis, sans-serif
+    font-weight 600
+    display flex
+    flex-direction column
+    justify-content flex-end
+    font-size 1.5em
+    border-left 0.15em solid #e5df7c
+    margin 0
+    // NOTE could also use align-items flex-end on parent
+    position absolute
+    top 0
+    right 0
+    padding 0 0.5em 0 0
     & li
-      list-style: none
-      line-height: 1.5
-      margin: 0
-      padding: 0.25em 0 0.5em 0
-      text-transform: uppercase
-      color: #971730
-      vertical-align: middle
+      list-style none
+      line-height 1.5
+      margin 0
+      padding 0.25em 0 0.5em 0
+      text-transform uppercase
+      color #971730
+      vertical-align middle
       &::before
-        line-height: 1
-        content: ''
-        display: inline-block
-        background-color: #fff
-        width: 1.5em
-        height: 1.5em
-        border-radius: 3em
-        margin-right: 1ex
-        vertical-align: middle
-        margin-left: -0.8325em
+        line-height 1
+        content ''
+        display inline-block
+        background-color #fff
+        width 1.5em
+        height 1.5em
+        border-radius 3em
+        margin-right 1ex
+        vertical-align middle
+        margin-left -0.8325em
         // use this one for Roboto Condensed
-        //margin-top: -0.075em
+        //margin-top -0.075em
         // use this one for Dosis
-        margin-top: -0.2em
+        margin-top -0.2em
 
 .bespoke-slide
   ul.agenda
-    height: 0
+    height 0
     li
-      opacity: 0
+      opacity 0
 
 .bespoke-active
   ul.agenda
-    transition: height 3s ease 1s
-    height: 100%
+    transition height 3s ease 1s
+    height 100%
     li.bespoke-bullet-active
-      opacity: 1
+      opacity 1
       &:first-of-type
-        transition: opacity 0.8s ease 4s
+        transition opacity 0.8s ease 4s
 
 .bespoke-slide.title
-  justify-content: flex-end
-  align-items: flex-end
+  justify-content flex-end
+  align-items flex-end
   h1
-    font-size: 2.5em
-    margin: 0 10% 10% 0
-    text-shadow: 0 1px 5px rgba(0,0,0,.15)
-    font-weight: 700
-    color: #fff
+    font-size 2.5em
+    margin 0 10% 10% 0
+    text-shadow 0 1px 5px rgba(0,0,0,.15)
+    font-weight 700
+    color #fff
 
 .bespoke-slide.speaker
-  background-color: #008CC2
-  color: #008CC2
-  font-family: Vollkorn, sans-serif
+  background-color #008CC2
+  color #008CC2
+  font-family Vollkorn, sans-serif
   .content
-    display: block
+    display block
   .name-plate
-    background-color: #fff
-    position: absolute
-    //top: 125px
-    top: 120px
-    left: 45%
-    width: 55%
-    height: 110px
-    padding-left: 60px
-    display: flex
-    flex-direction: column
-    justify-content: center
+    background-color #fff
+    position absolute
+    //top 125px
+    top 120px
+    left 45%
+    width 55%
+    height 110px
+    padding-left 60px
+    display flex
+    flex-direction column
+    justify-content center
     h1, h2
-      font-weight: 400
-      margin: 0
+      font-weight 400
+      margin 0
     h1
-      //font-size: 2.2em
-      font-size: 35px
-      line-height: 1.05
-      margin-top: 0.1em
+      //font-size 2.2em
+      font-size 35px
+      line-height 1.05
+      margin-top 0.1em
     h2
-      //font-size: 1.2em
-      font-size: 19px
-      line-height: 1.1
-      margin-left: 1.65em
-      //font-style: italic
-      //word-spacing: 0.125em;
-      //letter-spacing: 0.005em;
+      //font-size 1.2em
+      font-size 19px
+      line-height 1.1
+      margin-left 1.65em
+      //font-style italic
+      //word-spacing 0.125em
+      //letter-spacing 0.005em
   .headshot
-    position: absolute
-    //top: 55px
-    top: 50px
-    left: 75px
-    width: 250px
-    height: 250px
-    border-radius: 250px
-    overflow: hidden
-    //border: 5px solid #fff
-    box-shadow: 0 0 0 5px #fff
+    position absolute
+    //top 55px
+    top 50px
+    left 75px
+    width 250px
+    height 250px
+    border-radius 250px
+    overflow hidden
+    //border 5px solid #fff
+    box-shadow 0 0 0 5px #fff
   .contact
-    color: rgba(255,255,255,0.95)
-    position: absolute
-    //top: 220px
-    top: 215px
-    left: 330px
-    //font-size: 1.35em
-    font-size: 21px
-    word-spacing: 0.25em
-    line-height: 1.2
-    white-space: nowrap
+    color rgba(255,255,255,0.95)
+    position absolute
+    //top 220px
+    top 215px
+    left 330px
+    //font-size 1.35em
+    font-size 21px
+    word-spacing 0.25em
+    line-height 1.2
+    white-space nowrap
+    margin-top 1em
 
 .bespoke-slide.topic
-  background-image: url(../images/topic-slide.svg)
-  background-size: cover
+  background-image url(../images/topic-slide.svg)
+  background-size cover
 
   .content
-    display: block
-    position: absolute
-    left: 50%
-    top: 50%
-    transition: none
+    display block
+    position absolute
+    left 50%
+    top 50%
+    transition none
 
   h2
-    font-family: Dosis, sans-serif
-    color: #142642
-    font-size: 3.4em
-    font-weight: 600
-    text-transform: uppercase
-    line-height: 1
-    margin: -1em 0 0 0.5ex
+    font-family Dosis, sans-serif
+    color #142642
+    font-size 3.4em
+    font-weight 600
+    text-transform uppercase
+    line-height 1
+    margin -1em 0 0 0.5ex
 
 .bespoke-slide.subject
-  background-color: #111
+  background-color #111
 
-.content.quote
-  align-items: flex-end
-  opacity: 0
+figure.quote
+  display flex
+  flex-direction column
+  align-items flex-end
+  opacity 0
   blockquote
-    font-family: 'Roboto Condensed'
-    font-size: 1.2em
-    color: white
-    line-height: 1.6
-    font-style: italic
-    text-align: center
-    width: 50% 
-    margin: 1em 0
-    margin-right: 2em
-  cite
-    font-size: 0.8em
-    font-weight: lighter
-    font-style: normal
-    color: #fff
-    width: 50%
-    text-align: center
-    margin-right: 2em
-    text-transform: uppercase
-    letter-spacing: 0.5ex
+    font-family 'Roboto Condensed'
+    font-size 1.2em
+    width 50% 
+    margin 1em 2em 1em 0
+    p
+      color white
+      font-style italic
+      font-size inherit
+      line-height 1.6
+      text-align center
+      &:first-of-type::before
+        content open-quote
+      &:last-of-type
+        margin-bottom 0
+        &::after
+          content close-quote
+          margin-left -0.08em
+  figcaption
+    font-size 0.8em
+    font-weight lighter
+    font-style normal
+    color #fff
+    width 50%
+    text-align center
+    margin-right 2em
+    text-transform uppercase
+    letter-spacing 0.5ex
 
 .bespoke-active
-  .content.quote
-    transition: opacity 0.8s ease-in 0.75s
-    opacity: 1
+  figure.quote
+    transition opacity 0.8s ease-in 0.75s
+    opacity 1
 
 .image-caption
-  font-family: Dosis, sans-serif
-  position: absolute
-  bottom: 0.25em
-  right: 0
-  font-size: 3em
-  background-color: rgba(5,51,68,0.9);
-  color: #fff
-  padding: 0 0.25em 0.1em 0.25em
-  font-weight: 500
+  font-family Dosis, sans-serif
+  position absolute
+  bottom 0.25em
+  right 0
+  font-size 3em
+  background-color rgba(5,51,68,0.9)
+  color #fff
+  padding 0 0.25em 0.1em 0.25em
+  font-weight 500
 
 .bespoke-backdrop
-  // NOTE workaround bug in Chrome where 100vw isn't 100% \_o_/
-  width: 100%
-  //z-index: -1
-  opacity: 0
+  //width 100% // NOTE workaround bug in Chrome where 100vw isn't 100% \_o_/
+  //z-index -1
+  opacity 0
   &-active
-    opacity: 1
+    opacity 1
 
 .bespoke-backdrop.martin-fowler
-  opacity: 0
-  background-image: url(../images/martin-fowler.jpg)
-  background-size: cover
-  background-position: 0 40%
-  transform-origin: 35% 35%
-  transform: translateZ(0) scale(1.5)
+  opacity 0
+  background-image url(../images/martin-fowler.jpg)
+  background-size cover
+  background-position 0 40%
+  transform-origin 35% 35%
+  transform translateZ(0) scale(1.5)
 
 .bespoke-backdrop-active.martin-fowler
-  opacity: 0.3
-  transform: translateZ(0) scale(1.3)
-  transition: transform 5s ease-out, opacity 1s ease
+  opacity 0.3
+  transform translateZ(0) scale(1.3)
+  transition transform 5s ease-out, opacity 1s ease
 
-.content.code
-  padding: 0
-  background-color: #efefef
-  justify-content: flex-start
+//section.code
+section.code > .content
+  padding 0
+  background-color #efefef
+  justify-content flex-start
   .query
-    background-color: #19213B
-    width: 100%
-    min-height: 70%
-    display: flex
-    flex-direction: column
-    justify-content: flex-end
-    align-items: center
-    padding-bottom: 2em
+    background-color #19213B
+    width 100%
+    min-height 70%
+    display flex
+    flex-direction column
+    justify-content flex-end
+    align-items center
+    padding-bottom 2em
     &:not(.bespoke-bullet-current)
-      min-height: 35%
-      //transition: min-height 1s ease 0.5s, padding 1s ease 0.5s
-      //transition: min-height 1s ease 0.25s, padding 1s ease 0.25s
-      transition: min-height 1s ease, padding 0.5s ease
-      padding-bottom: 1.2em
+      min-height 35%
+      //transition min-height 1s ease 0.5s, padding 1s ease 0.5s
+      //transition min-height 1s ease 0.25s, padding 1s ease 0.25s
+      transition min-height 1s ease, padding 0.5s ease
+      padding-bottom 1.2em
       .label
-        opacity: 0
-        transition: opacity 0.5s ease
+        opacity 0
+        transition opacity 0.5s ease
       pre.code
-        //font-size: 1.2em
-        line-height: 1.4
-        opacity: 0.85
-        transition: line-height 0.5s ease, opacity 0.5s ease
-        overflow: hidden
+        //font-size 1.2em
+        line-height 1.4
+        opacity 0.85
+        transition line-height 0.5s ease, opacity 0.5s ease
+        overflow hidden
   pre.code
-    font-family: mplus-1m, monospace
-    font-weight: 500
-    font-size: 1.25em
-    line-height: 1.6
-    margin: 0
-    color: rgba(255,255,255,0.95)
+    font-family mplus-1m, monospace
+    font-weight 500
+    font-size 1.25em
+    line-height 1.6
+    margin 0
+    color rgba(255,255,255,0.95)
     // Flexbox likes to cause scrollbars when we don't need them
-    overflow: hidden
+    overflow hidden
     .keyword, .function
-      //font-weight: 400
-      font-weight: 700
+      //font-weight 400
+      font-weight 700
     .keyword
-      color: #a0ff7c
+      color #a0ff7c
     .function
-      color: #ffffff
+      color #ffffff
   .label
-    position: absolute
-    top: 1.5ex
-    left: 1.5ex
-    padding: 0.25ex 0.5ex
-    border: 0px solid rgba(255,255,255,0.25)
-    border-width: 0 0.2ex
-    border-radius: 0.75ex
-    font-family: Dosis
-    font-weight: 300
-    color: rgba(255,255,255,.55)
-    line-height: 1
-    font-size: 0.9em
+    position absolute
+    top 1.5ex
+    left 1.5ex
+    padding 0.25ex 0.5ex
+    border 0px solid rgba(255,255,255,0.25)
+    border-width 0 0.2ex
+    border-radius 0.75ex
+    font-family Dosis
+    font-weight 300
+    color rgba(255,255,255,.55)
+    line-height 1
+    font-size 0.9em
   pre.result
-    font-family: mplus-1m, monospace
-    font-size: 1.3em
-    line-height: 1.5
-    //line-height: 1.4
-    //font-size: 1.1em
-    color: #303030
-    margin: 0
-    padding: 1em 1em 0 1em
-    overflow: hidden
+    font-family mplus-1m, monospace
+    font-size 1.3em
+    line-height 1.5
+    //line-height 1.4
+    //font-size 1.1em
+    color #303030
+    margin 0
+    padding 1em 1em 0 1em
+    overflow hidden
 
 .bespoke-overview
   .bespoke-slide
     // NOTE currently used for transitioning into overview
-    transition: transform 0.3s ease-out, opacity 0.8s ease-in-out
+    transition transform 0.3s ease-out, opacity 0.8s ease-in-out
     .content
-      opacity: 1
+      opacity 1
   .bespoke-backdrop-active
-    opacity: 0
-
-//@import 'prism/themes/prism-okaidia.css'
+    opacity 0
