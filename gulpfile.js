@@ -3,26 +3,27 @@
 var pkg = require('./package.json'),
   gulp = require('gulp'),
   gutil = require('gulp-util'),
-  plumber = require('gulp-plumber'),
-  rename = require('gulp-rename'),
-  connect = require('gulp-connect'),
-  browserify = require('gulp-browserify'),
-  uglify = require('gulp-uglify'),
-  jade = require('gulp-jade'),
-  stylus = require('gulp-stylus'),
   autoprefixer = require('gulp-autoprefixer'),
+  browserify = require('gulp-browserify'),
+  connect = require('gulp-connect'),
   csso = require('gulp-csso'),
   del = require('del'),
-  through = require('through'),
   ghpages = require('gh-pages'),
+  jade = require('gulp-jade'),
   path = require('path'),
-  isDist = process.argv.indexOf('serve') === -1;
+  plumber = require('gulp-plumber'), // plumber prevents pipe breaking caused by errors thrown by plugins
+  rename = require('gulp-rename'),
+  stylus = require('gulp-stylus'),
+  through = require('through'),
+  uglify = require('gulp-uglify'),
+  isDist = process.argv.indexOf('deploy') >= 0;
 
 gulp.task('js', ['clean:js'], function() {
   return gulp.src('src/scripts/main.js')
-    .pipe(isDist ? through() : plumber())
-    .pipe(browserify({ transform: ['debowerify'], debug: !isDist }))
-    .pipe(isDist ? uglify() : through())
+    //.pipe(isDist ? through() : plumber())
+    .pipe(browserify({ transform: ['debowerify'] }))
+    //.pipe(isDist ? uglify() : through())
+    .pipe(uglify())
     .pipe(rename('build.js'))
     .pipe(gulp.dest('dist/build'))
     .pipe(connect.reload());
@@ -41,9 +42,8 @@ gulp.task('css', ['clean:css'], function() {
   return gulp.src('src/styles/main.styl')
     .pipe(isDist ? through() : plumber())
     .pipe(stylus({
-      // Allow CSS to be imported from node_modules and bower_components
-      'include css': true,
-      'paths': ['./node_modules', './bower_components']
+      'include css': true, // Allow CSS to be imported from node_modules
+      paths: ['./node_modules']
     }))
     .pipe(autoprefixer('last 2 versions', { map: false }))
     .pipe(isDist ? csso() : through())
@@ -91,6 +91,7 @@ gulp.task('clean:images', function(done) {
 gulp.task('connect', ['build'], function() {
   connect.server({
     root: 'dist',
+    port: 8000,
     livereload: true
   });
 });
