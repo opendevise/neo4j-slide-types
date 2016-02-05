@@ -34,6 +34,7 @@ See the <<docs/slide-types#,Neo4j Slide Types>> catalog (in progress) for a list
 * icon:youtube-play[role=red,alt=Video] https://www.youtube.com/watch?v=W_i_DrWic88[Instantly Better Presentations] - Damian Conway <- [blue]_Must see!_
    - icon:file-pdf-o[role=red,alt=PDF] http://damian.conway.org/IBP.pdf[Instantly Better Presentations - Handout]
 * https://medium.com/the-rectangle-behind-you/the-rectangle-behind-you-103179fcfc32[The Rectangle Behind You] (Series) - Marcin Wichary
+* http://blog.ted.com/10-tips-for-better-slide-decks[10 Tips for Better Slide Decks] - Aaron Weyenberg
 * http://trainingintheopen.com/speaker-training[Training in the Open] - Emma Jane Hogbin Westby
 * http://www.bothsidesofthetable.com/2013/10/20/how-to-nail-a-presentation-to-a-crowd[How to Nail a Group Presentation] - Mark Suster
 * http://www.inc.com/sims-wyeth/7-ways-to-break-bad-public-speaking-habits.html[7 Ways to Break Bad Speaking Habits] - Sims Wyeth
@@ -69,6 +70,7 @@ The following presentations are either good examples or exhibit bright spots.
 * http://www.slideshare.net/khalvorson/content-strategy-for-everything[Content Strategy for Everything] - Kristina Halvorson
 * https://speakerdeck.com/vanstee/raft-consensus-for-rubyists[Raft: Consensus for Rubyists] - Patrick Van Stee (for its node diagrams)
 * https://vimeo.com/108328246[Good Is The Enemy Of Great] (http://www.aresluna.org/the-rectangle-behind-you/good-perfect-talk/#2[slides])
+* https://speakerdeck.com/kouphax (nice styling)
 
 === Photo archives
 
@@ -82,3 +84,5 @@ The following presentations are either good examples or exhibit bright spots.
 === Design tools
 
 * http://app.programmingfonts.org[Programming Fonts Tester]
+* https://coolors.co[Color schemes generator (roulette wheel)]
+* https://www.google.com/design/spec/style/color.html#color-color-palette[Material design colors]
