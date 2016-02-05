@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Neo4j Slide Types</title>
+    <link rel="stylesheet" href="build/build.css">
+  </head>
+  <body>
+    <article class="deck">
+      <section style="background-image: url(images/backdrop-nodes-green.svg); background-size: cover" class="title">
+        <h1>Neo4j Slide Types</h1>
+      </section>
+      <section class="speaker">
+        <div class="name-plate">
+          <h1>Michael Hunger</h1>
+          <h2>Head of Developer Relations</h2>
+        </div>
+        <div class="headshot"><img src="images/michael-hunger.jpg" alt="Michael Hunger" width="400" style="margin-left: -48px"></div>
+        <p class="contact">@mesirii | michael@neo4j.org</p>
+      </section>
+      <section class="agenda">
+        <ul class="agenda build-items">
+          <li>Databases are no fun</li>
+          <li>Relational pain -&gt; Graph fun</li>
+          <li>The world is a graph</li>
+          <li>Model, query, import</li>
+          <li>Developer zone fun</li>
+        </ul>
+      </section>
+      <section class="topic">
+        <h2>[:Modeling]</h2>
+      </section>
+      <section class="subject"><img src="images/spring-data-neo4j.png" width="150" height="150"></section>
+      <section style="background-image: url(images/backdrop-mountains.jpg); background-size: cover">
+        <div class="image-caption">The world is a graph</div>
+      </section>
+      <section data-bespoke-backdrop="martin-fowler">
+        <figure class="quote">
+          <blockquote>
+            <p>The advantage of not using an aggregate structure in the database is that it allows you to slice and dice your data <span class="underline">different ways</span> for <span class="underline">different audiences</span>.</p>
+          </blockquote>
+          <figcaption>Martin Fowler</figcaption>
+        </figure>
+      </section>
+      <section class="query-result">
+        <div class="query build">
+          <div class="label">Query Title Here</div>
+          <pre class="source"><span class="keyword">MATCH</span> (h1:Hashtag)-[:TAGS]-&gt;(TWEET)&lt;-[:TAGS]-(h2:Hashtag)
+<span class="keyword">WHERE</span> h1.name = {hashtag}
+<span class="keyword">RETURN</span> h1.name <span class="keyword">AS</span> from, h2.name <span class="keyword">AS</span> to, <span class="function">COUNT(</span>*<span class="function">)</span> <span class="keyword">AS</span> value</pre>
+        </div>
+        <pre class="result build">## id      u.username  mentions
+##  1   hadleywickham        43
+##  2        RLangTip         6
+##  3  nicolemargaret         6
+##  4        hrbrmstr         6
+##  5       megcevans         5
+</pre>
+      </section>
+    </article>
+    <script src="build/build.js"></script>
+  </body>
+</html>
