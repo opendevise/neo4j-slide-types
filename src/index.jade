@@ -9,17 +9,17 @@ html(lang='en')
 
   body
     article.deck
-      section.title(style='background-image: url(images/backdrop-nodes-green.svg); background-size: cover'): .content
+      section.title(style='background-image: url(images/backdrop-nodes-green.svg); background-size: cover')
         h1 Neo4j Slide Types
 
-      section.speaker: .content
+      section.speaker
         .name-plate
           h1 Michael Hunger
           h2 Head of Developer Relations
         div.headshot
           img(src='images/michael-hunger.jpg', alt='Michael Hunger', width='400', style='margin-left: -48px')
         p.contact @mesirii | michael@neo4j.org
-      section.agenda: .content
+      section.agenda
         ul.agenda.build-items
           li Databases are no fun
           li Relational pain -&gt; Graph fun
@@ -27,25 +27,25 @@ html(lang='en')
           li Model, query, import
           li Developer zone fun
 
-      section.topic: .content
+      section.topic
         h2 [:Modeling]
 
-      section.subject: .content
-        img(src='images/spring-data-neo4j.png', style='width: 25%')
+      section.subject
+        img(src='images/spring-data-neo4j.png', width='150', height='150')
 
-      section: .content(style='background-image: url(images/backdrop-mountains.jpg); background-size: cover')
+      section(style='background-image: url(images/backdrop-mountains.jpg); background-size: cover')
         .image-caption The world is a graph
 
-      section(data-bespoke-backdrop='martin-fowler'): .content
+      section(data-bespoke-backdrop='martin-fowler')
         figure.quote
           blockquote
             p The advantage of not using an aggregate structure in the database is that it allows you to slice and dice your data #[span(class='underline') different ways] for #[span(class='underline') different audiences].
-          figcaption — Martin Fowler —
+          figcaption Martin Fowler
 
-      section.code: .content
+      section.query-result
         .query.build
           .label Query Title Here
-          pre.code(data-language=cypher).
+          pre.source(data-language=cypher).
             <span class="keyword">MATCH</span> (h1:Hashtag)-[:TAGS]-&gt;(TWEET)&lt;-[:TAGS]-(h2:Hashtag)
             <span class="keyword">WHERE</span> h1.name = {hashtag}
             <span class="keyword">RETURN</span> h1.name <span class="keyword">AS</span> from, h2.name <span class="keyword">AS</span> to, <span class="function">COUNT(</span>*<span class="function">)</span> <span class="keyword">AS</span> value

@@ -61,24 +61,12 @@ p { margin: 0 0 1em 0 }
   //transition transform 0.3s ease, opacity 0.3s ease
   &:not([data-bespoke-backdrop])
     background-color $color-canvas
-  .content
-    opacity 0
-    transition opacity 0.3s ease
-    width 100%
-    height 100%
-    display inherit
-    flex-direction inherit
-    justify-content inherit
-    align-items inherit
-
-//.bespoke-inactive
+  //transition opacity 0.3s ease
 
 .bespoke-active
   pointer-events auto
   opacity 1
   z-index 1 // Webkit requires z-index to be 1 for elements to receive focus (may no longer apply)
-  .content
-    opacity 1
 
 .bespoke-bullet
   transition opacity 0.8s ease
@@ -87,69 +75,6 @@ p { margin: 0 0 1em 0 }
   &-active
     opacity 1
     pointer-events auto
-
-//.bespoke-slide.agenda
-.bespoke-slide.agenda > .content
-  background-color #d4ca2e
-  background-image url(../images/backdrop-nodes-yellow.png)
-  background-size cover
-
-ul
-  padding-left 0
-  margin-left 1.5ex
-
-  &.agenda
-    font-family Dosis, sans-serif
-    font-weight 600
-    display flex
-    flex-direction column
-    justify-content flex-end
-    font-size 1.5em
-    border-left 0.15em solid #e5df7c
-    margin 0
-    // NOTE could also use align-items flex-end on parent
-    position absolute
-    top 0
-    right 0
-    padding 0 0.5em 0 0
-    & li
-      list-style none
-      line-height 1.5
-      margin 0
-      padding 0.25em 0 0.5em 0
-      text-transform uppercase
-      color #971730
-      vertical-align middle
-      &::before
-        line-height 1
-        content ''
-        display inline-block
-        background-color #fff
-        width 1.5em
-        height 1.5em
-        border-radius 3em
-        margin-right 1ex
-        vertical-align middle
-        margin-left -0.8325em
-        // use this one for Roboto Condensed
-        //margin-top -0.075em
-        // use this one for Dosis
-        margin-top -0.2em
-
-.bespoke-slide
-  ul.agenda
-    height 0
-    li
-      opacity 0
-
-.bespoke-active
-  ul.agenda
-    transition height 3s ease 1s
-    height 100%
-    li.bespoke-bullet-active
-      opacity 1
-      &:first-of-type
-        transition opacity 0.8s ease 4s
 
 .bespoke-slide.title
   justify-content flex-end
@@ -160,17 +85,17 @@ ul
     text-shadow 0 1px 5px rgba(0,0,0,.15)
     font-weight 700
     color #fff
+  // FIXME temporary!
+  footer
+    display none
 
 .bespoke-slide.speaker
-  background-color #008CC2
-  color #008CC2
+  background-color #008cc2
+  color #008cc2
   font-family Vollkorn, sans-serif
-  .content
-    display block
   .name-plate
     background-color #fff
     position absolute
-    //top 125px
     top 120px
     left 45%
     width 55%
@@ -219,17 +144,67 @@ ul
     white-space nowrap
     margin-top 1em
 
+.bespoke-slide.agenda
+  background-color #d4ca2e
+  background-image url(../images/backdrop-nodes-yellow.png)
+  background-size cover
+
+ul
+  padding-left 0
+  margin-left 1.5ex
+
+  &.agenda
+    height 0
+    font-family Dosis, sans-serif
+    font-weight 600
+    display flex
+    flex-direction column
+    justify-content flex-end
+    font-size 1.5em
+    border-left 0.15em solid #e5df7c
+    margin 0
+    // NOTE could also use align-items flex-end on parent
+    position absolute
+    top 0
+    right 0
+    padding 0 0.5em 0 0
+    & li
+      opacity 0
+      list-style none
+      line-height 1.5
+      margin 0
+      padding 0.25em 0 0.5em 0
+      text-transform uppercase
+      color #971730
+      vertical-align middle
+      &::before
+        line-height 1
+        content ''
+        display inline-block
+        background-color #fff
+        width 1.5em
+        height 1.5em
+        border-radius 3em
+        margin-right 1ex
+        vertical-align middle
+        margin-left -0.8325em
+        // use this one for Roboto Condensed
+        //margin-top -0.075em
+        // use this one for Dosis
+        margin-top -0.2em
+
+.bespoke-active ul.agenda
+  transition height 3s ease 1s
+  height 100%
+  li.bespoke-bullet-active
+    opacity 1
+    &:first-of-type
+      transition opacity 0.8s ease 4s
+
 .bespoke-slide.topic
   background-image url(../images/topic-slide.svg)
   background-size cover
-
-  .content
-    display block
-    position absolute
-    left 50%
-    top 50%
-    transition none
-
+  transition none
   h2
     font-family Dosis, sans-serif
     color #142642
@@ -237,21 +212,24 @@ ul
     font-weight 600
     text-transform uppercase
     line-height 1
-    margin -1em 0 0 0.5ex
+    margin 0
+    align-self flex-start
+    text-align center
+    margin -1em 0 0 45%
+    width 55%
 
 .bespoke-slide.subject
-  background-color #111
+  background-color $color-surface
 
 figure.quote
-  display flex
-  flex-direction column
-  align-items flex-end
+  align-self flex-end
+  width 50%
+  margin 3.5em 2.5em 0 0
   opacity 0
   blockquote
     font-family 'Roboto Condensed'
     font-size 1.2em
-    width 50% 
-    margin 1em 2em 1em 0
+    margin 0
     p
       color white
       font-style italic
@@ -261,7 +239,7 @@ figure.quote
       &:first-of-type::before
         content open-quote
       &:last-of-type
-        margin-bottom 0
+        //margin-bottom 0
         &::after
           content close-quote
           margin-left -0.08em
@@ -270,25 +248,28 @@ figure.quote
     font-weight lighter
     font-style normal
     color #fff
-    width 50%
     text-align center
-    margin-right 2em
     text-transform uppercase
     letter-spacing 0.5ex
+    &::before
+      content $sym-dash-em $sym-nbsp
+    &::after
+      content $sym-nbsp $sym-dash-em
 
 .bespoke-active
   figure.quote
     transition opacity 0.8s ease-in 0.75s
     opacity 1
 
-.image-caption
+.bespoke-slide.image h2, .image-caption
   font-family Dosis, sans-serif
+  margin 0
   position absolute
   bottom 0.25em
   right 0
   font-size 3em
   background-color rgba(5,51,68,0.9)
-  color #fff
+  color $color-inverse
   padding 0 0.25em 0.1em 0.25em
   font-weight 500
 
@@ -308,17 +289,16 @@ figure.quote
   transform translateZ(0) scale(1.5)
 
 .bespoke-backdrop-active.martin-fowler
-  opacity 0.3
+  opacity 0.4
   transform translateZ(0) scale(1.3)
-  transition transform 5s ease-out, opacity 1s ease
+  transition transform 5s ease-in-out, opacity 1s ease
 
-//section.code
-section.code > .content
+.bespoke-slide.query-result
   padding 0
   background-color #efefef
   justify-content flex-start
   .query
-    background-color #19213B
+    background-color #19213b
     width 100%
     min-height 70%
     display flex
@@ -335,13 +315,13 @@ section.code > .content
       .label
         opacity 0
         transition opacity 0.5s ease
-      pre.code
+      pre.source
         //font-size 1.2em
         line-height 1.4
         opacity 0.85
         transition line-height 0.5s ease, opacity 0.5s ease
         overflow hidden
-  pre.code
+  pre.source
     font-family mplus-1m, monospace
     font-weight 500
     font-size 1.25em
@@ -350,6 +330,9 @@ section.code > .content
     color rgba(255,255,255,0.95)
     // Flexbox likes to cause scrollbars when we don't need them
     overflow hidden
+    code
+      font-size inherit
+      font-family inherit
     .keyword, .function
       //font-weight 400
       font-weight 700
@@ -357,7 +340,7 @@ section.code > .content
       color #a0ff7c
     .function
       color #ffffff
-  .label
+  .label, h2
     position absolute
     top 1.5ex
     left 1.5ex
@@ -385,7 +368,6 @@ section.code > .content
   .bespoke-slide
     // NOTE currently used for transitioning into overview
     transition transform 0.3s ease-out, opacity 0.8s ease-in-out
-    .content
-      opacity 1
+  // QUESTION what does this do?
   .bespoke-backdrop-active
     opacity 0

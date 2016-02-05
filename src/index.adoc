@@ -7,8 +7,11 @@ Michael Hunger <michael@neo4j.org>
 :imagesdir: images
 :!sectids:
 
-[.agenda]
+image::backdrop-nodes-green.svg[Graph nodes background,1280,720,role=cover canvas]
+
+[.agenda%conceal]
 == Agenda
+[.agenda,build=items]
 * Databases are no fun
 * Relational pain -> Graph fun
 * The world is a graph
@@ -18,26 +21,31 @@ Michael Hunger <michael@neo4j.org>
 [.topic]
 == [:Modeling]
 
-[.subject]
+[.subject%conceal]
 == Spring Data Neo4j
-image::spring-data-neo4j.png[Spring Data Neo4j,300,300]
+image::spring-data-neo4j.png[Spring Data Neo4j,150,150]
 
-//[.background.fit]
 == The world is a graph
 image::backdrop-mountains.jpg[Mountains,1280,720,role=cover canvas]
 
+[backdrop-role=martin-fowler]
 == !
 "The advantage of _not_ using an aggregate structure in the database is that it allows you to slice and dice your data [.underline]#different ways# for [.underline]#different audiences#."
 -- Martin Fowler
 
 [.query-result]
 == Query Title Here
+[.query.build]
+--
 [source,cypher]
 ----
 MATCH (h1:Hashtag)-[:TAGS]->(TWEET)<-[:TAGS]-(h2:Hashtag)
 WHERE h1.name = {hashtag}
 RETURN h1.name AS from, h2.name AS to, COUNT(*) AS value
 ----
+--
+
+[.result.build]
 ....
 ## id      u.username  mentions
 ##  1   hadleywickham        43

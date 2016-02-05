@@ -8,6 +8,10 @@ A http://markdalgleish.com/projects/bespoke.js[Bespoke.js] presentation that ide
 
 First, ensure you have a JDK installed.
 
+Next, install the required Ruby gems (we recommend using RVM at this stage):
+
+ $ gem install bundle && bundler
+
 Next, execute the `build` task using the Gradle Wrapper.
 This task will setup Node and NPM, install packages and run the build by delegating to Gulp:
 
