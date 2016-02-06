@@ -9,7 +9,7 @@ var isWebKit = 'webkitAppearance' in document.documentElement.style,
   bullets = require('bespoke-bullets'),
   classes = require('bespoke-classes'),
   //cursor = require('bespoke-cursor'),
-  //forms = require('bespoke-forms'),
+  forms = require('bespoke-forms'),
   fullscreen = require('bespoke-fullscreen'),
   hash = require('bespoke-hash'),
   nav = require('bespoke-nav'),
@@ -27,6 +27,6 @@ bespoke.from('.deck', [
   // enable cursor() to automatically hide the cursor when presenting
   //cursor(),
   // enable forms() if you have form elements in your slides
-  //forms(),
+  forms(),
   hash()
 ]);
