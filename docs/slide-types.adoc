@@ -154,7 +154,7 @@ image::topic-slide-3.jpg[]
 == Transition
 
 .Also known as
-Intermezzo
+Intermezzo, Segue
 
 .Definition
 A _transition slide_ helps shift from one topic to another smoothly.
