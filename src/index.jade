@@ -13,12 +13,12 @@ html(lang='en')
         h1 Neo4j Slide Types
 
       section.speaker
-        .name-plate
-          h1 Michael Hunger
-          h2 Head of Developer Relations
-        div.headshot
-          img(src='images/michael-hunger.jpg', alt='Michael Hunger', width='400', style='margin-left: -48px')
+        header
+          h2 Michael Hunger
+          h3 Head of Developer Relations
+        figure.headshot: img(src='images/michael-hunger.jpg', alt='Michael Hunger')
         p.contact @mesirii | michael@neo4j.org
+
       section.agenda
         ul.agenda.build-items
           li Databases are no fun
@@ -31,7 +31,7 @@ html(lang='en')
         h2 [:Modeling]
 
       section.subject
-        img(src='images/spring-data-neo4j.png', width='150', height='150')
+        img(src='images/spring-data-neo4j.png', width=150, height=150)
 
       section(style='background-image: url(images/backdrop-mountains.jpg); background-size: cover')
         .image-caption The world is a graph

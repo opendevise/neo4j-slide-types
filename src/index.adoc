@@ -1,13 +1,16 @@
 = Neo4j Slide Types
 Michael Hunger <michael@neo4j.org>
-:avatar: michael-hunger.jpg
 :organization: Neo Technology
 :position: Head of Developer Relations
 :twitter: @mesirii 
+:avatar: michael-hunger.jpg
 :imagesdir: images
 :!sectids:
 
 image::backdrop-nodes-green.svg[Graph nodes background,1280,720,role=cover canvas]
+
+[%editable,transform=speaker]
+== Speaker
 
 [.agenda%conceal]
 == Agenda
