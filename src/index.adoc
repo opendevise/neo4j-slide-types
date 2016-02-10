@@ -5,6 +5,7 @@ Michael Hunger <michael@neo4j.org>
 :twitter: @mesirii 
 :avatar: michael-hunger.jpg
 :imagesdir: images
+:favicon: {imagesdir}/favicon.ico
 :!sectids:
 
 image::backdrop-nodes-green.svg[Graph nodes background,1280,720,role=cover canvas]
