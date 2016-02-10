@@ -28,6 +28,7 @@ var pkg = require('./package.json'),
     language_out: 'ES5'
   },
   tidyOpts = {
+    'anchor-as-name': 'false',
     'coerce-endtags': 'false',
     'drop-empty-elements': 'false',
     'fix-uri': 'false',
