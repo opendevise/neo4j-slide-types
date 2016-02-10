@@ -15,7 +15,7 @@ span.underline
 
 aside[role=note] { display: none }
 figure { margin: 0 }
-img { vertical-align: middle }
+img, video { vertical-align: middle }
 p { margin: 0 0 1em 0 }
 
 .deck
@@ -363,6 +363,7 @@ figure.quote
     padding 1em 1em 0 1em
     overflow hidden
 
+// TODO add layout hack to hide controls on vimeo videos
 figure.cover, figure.contain
   position absolute
   top 0
@@ -370,13 +371,13 @@ figure.cover, figure.contain
   bottom 0
   left 0
   overflow hidden
-  img, object, svg
+  img, object, svg, video, &.video iframe
     width 100%
     height 100%
     object-fit cover
 
 figure.contain
-  img, object, svg
+  img, object, svg, video, &.video iframe
     object-fit contain
 
 .bespoke-overview
