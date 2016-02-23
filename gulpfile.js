@@ -22,7 +22,7 @@ var pkg = require('./package.json'),
   tidy = require('tidy-html5').tidy_html5,
   uglify = require('gulp-uglify'),
   closureCompilerOpts = {
-    compilation_level: 'ADVANCED',
+    compilation_level: 'SIMPLE', // ADVANCED breaks bespoke-fullscreen
     warning_level: 'QUIET',
     language_in: 'ES5_STRICT',
     language_out: 'ES5'
