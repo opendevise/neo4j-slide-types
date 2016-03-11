@@ -76,6 +76,8 @@ The following presentations are either good examples or exhibit bright spots.
 * https://speakerdeck.com/vanstee/raft-consensus-for-rubyists[Raft: Consensus for Rubyists] - Patrick Van Stee (for its node diagrams)
 * https://vimeo.com/108328246[Good Is The Enemy Of Great] (http://www.aresluna.org/the-rectangle-behind-you/good-perfect-talk/#2[slides])
 * https://speakerdeck.com/kouphax (nice styling)
+* http://www.slideshare.net/jboner
+* https://www.youtube.com/watch?v=D85NqSrpzew[How to write well, instantly, every time] - Scott Berkun; has both interesting techniques and just a great talk about producing content
 
 === Photo archives
 
@@ -86,8 +88,9 @@ The following presentations are either good examples or exhibit bright spots.
 * http://mypubliclands.tumblr.com/
 * https://www.flickr.com/photos/mypubliclands
 
-=== Design tools
+=== Design tools and tips
 
 * http://app.programmingfonts.org[Programming Fonts Tester]
 * https://coolors.co[Color schemes generator (roulette wheel)]
 * https://www.google.com/design/spec/style/color.html#color-color-palette[Material design colors]
+* http://thenewcode.com/443/Making-Comic-Book-Speech-Bubbles-with-SVG[Making Comic Book Speech Bubbles with SVG]
