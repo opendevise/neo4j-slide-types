@@ -34,6 +34,7 @@ See the <<docs/slide-types#,Neo4j Slide Types>> catalog (in progress) for a list
 === Advice for giving presentations
 
 * icon:book[role=black,alt=Book] http://presentationpatterns.com[Presentation Patterns] - Neal Ford, Matthew McCullough, Nathaniel Schutta <- [.green]_Highly recommended!_
+  - icon:video-camera[role=black,alt=Video] http://shop.oreilly.com/product/0636920049906.do?code=authd[Companion Video]
 * icon:globe[role=blue,alt=Online] icon:book[role=black,alt=Book] http://resonate.duarte.com[Resonate] - Nancy Duarte <- [green]_Also highly recommended!_
 * icon:youtube-play[role=red,alt=Video] https://www.youtube.com/watch?v=W_i_DrWic88[Instantly Better Presentations] - Damian Conway <- [blue]_Must see!_
    - icon:file-pdf-o[role=red,alt=PDF] http://damian.conway.org/IBP.pdf[Instantly Better Presentations - Handout]
@@ -82,6 +83,7 @@ The following presentations are either good examples or exhibit bright spots.
 === Photo archives
 
 * http://unspash.com
+* https://pixabay.com
 * http://finda.photo
 * https://www.flickr.com/photos/usinterior/favorites
 * https://www.flickr.com/groups/rnmpco/pool/
