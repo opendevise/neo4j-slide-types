@@ -1,5 +1,6 @@
 /.gradle/
+/.ruby-version
 /Gemfile.lock
 /node_modules/
-/bower_components/
 /dist/
+/rubygems/
