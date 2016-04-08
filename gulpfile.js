@@ -41,6 +41,7 @@ var pkg = require('./package.json'),
     'tidy-mark': 'false',
     'wrap': '0'
   },
+  outputDir = 'build/bespoke',
   isDist = process.argv.indexOf('deploy') >= 0;
 
 gulp.task('js', ['clean:js'], function() {
@@ -52,7 +53,7 @@ gulp.task('js', ['clean:js'], function() {
     .pipe(buffer())
     .pipe(isDist ? closureCompiler(closureCompilerOpts) : uglify())
     .pipe(rename('build.js'))
-    .pipe(gulp.dest('dist/build'))
+    .pipe(gulp.dest(outputDir + '/build'))
     .pipe(connect.reload());
 });
 
@@ -61,33 +62,33 @@ gulp.task('jade-html', ['clean:jade-html'], function() {
     .pipe(isDist ? through() : plumber())
     .pipe(jade({ pretty: '  ' }))
     .pipe(rename('index-jade.html'))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest(outputDir))
     .pipe(connect.reload());
 });
 
-gulp.task('asciidoc-html', ['clean:asciidoc-html'], function() {
-  return gulp.src('src/index.adoc')
-    .pipe(isDist ? through() : plumber())
-    // NOTE using stdin here would cause loss of context
-    //.pipe(exec('bundle exec asciidoctor-bespoke -o - src/index.adoc', { pipeStdout: true }))
-    .pipe(exec('bundle exec asciidoctor-bespoke -T src/templates -o - src/index.adoc', { pipeStdout: true }))
-    .pipe(exec.reporter({ stdout: false }))
-    .pipe(through(function(file) {
-      var html = tidy(file.contents.toString(), tidyOpts) // NOTE based on tidy 4.9.26
-        // strip extra newlines inside <pre> tags (fixed in tidy 5.1.2)
-        .replace(new RegExp('<pre([^>]*)>\\n([\\s\\S]*?)\\n</pre>', 'g'), '<pre$1>$2</pre>\n')
-        // strip extra newline after <script> start tag for empty and single-line content
-        .replace(new RegExp('>\\n(?:(.+)\\n)?</script>', 'g'), '>$1</script>')
-        // add newline before <script> tags
-        .replace(new RegExp('><script([^>]*)>', 'g'), '>\n<script$1>');
-      file.contents = new Buffer(html);
-      this.push(file);
-    }))
-    .pipe(rename('index.html'))
-    .pipe(chmod(644))
-    .pipe(gulp.dest('dist'))
-    .pipe(connect.reload());
-});
+//gulp.task('asciidoc-html', ['clean:asciidoc-html'], function() {
+//  return gulp.src('src/index.adoc')
+//    .pipe(isDist ? through() : plumber())
+//    // NOTE using stdin here would cause loss of context
+//    //.pipe(exec('bundle exec asciidoctor-bespoke -o - src/index.adoc', { pipeStdout: true }))
+//    .pipe(exec('bundle exec asciidoctor-bespoke -T src/templates -o - src/index.adoc', { pipeStdout: true }))
+//    .pipe(exec.reporter({ stdout: false }))
+//    .pipe(through(function(file) {
+//      var html = tidy(file.contents.toString(), tidyOpts) // NOTE based on tidy 4.9.26
+//        // strip extra newlines inside <pre> tags (fixed in tidy 5.1.2)
+//        .replace(new RegExp('<pre([^>]*)>\\n([\\s\\S]*?)\\n</pre>', 'g'), '<pre$1>$2</pre>\n')
+//        // strip extra newline after <script> start tag for empty and single-line content
+//        .replace(new RegExp('>\\n(?:(.+)\\n)?</script>', 'g'), '>$1</script>')
+//        // add newline before <script> tags
+//        .replace(new RegExp('><script([^>]*)>', 'g'), '>\n<script$1>');
+//      file.contents = new Buffer(html);
+//      this.push(file);
+//    }))
+//    .pipe(rename('index.html'))
+//    .pipe(chmod(644))
+//    .pipe(gulp.dest(outputDir))
+//    .pipe(connect.reload());
+//});
 
 gulp.task('css', ['clean:css'], function() {
   return gulp.src('src/styles/main.styl')
@@ -96,67 +97,68 @@ gulp.task('css', ['clean:css'], function() {
     .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
     .pipe(isDist ? csso() : through())
     .pipe(rename('build.css'))
-    .pipe(gulp.dest('dist/build'))
+    .pipe(gulp.dest(outputDir + '/build'))
     .pipe(connect.reload());
 });
 
-gulp.task('fonts', ['clean:fonts'], function() {
-  return gulp.src('src/fonts/*')
-    .pipe(gulp.dest('dist/fonts'))
-    .pipe(connect.reload());
-});
+//gulp.task('fonts', ['clean:fonts'], function() {
+//  return gulp.src('src/fonts/*')
+//    .pipe(gulp.dest(outputDir + '/fonts'))
+//    .pipe(connect.reload());
+//});
 
-gulp.task('images', ['clean:images'], function() {
-  return gulp.src('src/images/**/*')
-    .pipe(gulp.dest('dist/images'))
-    .pipe(connect.reload());
-});
+//gulp.task('images', ['clean:images'], function() {
+//  return gulp.src('src/images/**/*')
+//    .pipe(gulp.dest(outputDir + '/images'))
+//    .pipe(connect.reload());
+//});
 
-gulp.task('clean', function() {
-  return del('dist');
-});
+//gulp.task('clean', function() {
+//  return del(outputDir);
+//});
 
 gulp.task('clean:jade-html', function() {
-  return del('dist/index-jade.html');
+  return del(outputDir + '/index-jade.html');
 });
 
-gulp.task('clean:asciidoc-html', function() {
-  return del('dist/index.html');
-});
+//gulp.task('clean:asciidoc-html', function() {
+//  return del(outputDir + '/index.html');
+//});
 
 gulp.task('clean:js', function() {
-  return del('dist/build/build.js');
+  return del(outputDir + '/build/build.js');
 });
 
 gulp.task('clean:css', function() {
-  return del('dist/build/build.css');
+  return del(outputDir + '/build/build.css');
 });
 
-gulp.task('clean:fonts', function() {
-  return del('dist/fonts');
-});
+//gulp.task('clean:fonts', function() {
+//  return del(outputDir + '/fonts');
+//});
 
-gulp.task('clean:images', function() {
-  return del('dist/images');
-});
+//gulp.task('clean:images', function() {
+//  return del(outputDir + '/images');
+//});
 
 gulp.task('connect', ['build'], function() {
-  connect.server({ root: 'dist', port: 8000, livereload: true });
+  connect.server({ root: outputDir, port: 8000, livereload: true });
 });
 
 gulp.task('watch', function() {
-  gulp.watch('src/**/*.adoc', ['asciidoc-html']);
+  //gulp.watch('src/**/*.adoc', ['asciidoc-html']);
   gulp.watch('src/**/*.jade', ['jade-html']);
   gulp.watch('src/scripts/**/*.js', ['js']);
   gulp.watch('src/styles/**/*.styl', ['css']);
-  gulp.watch('src/images/**/*', ['images']);
-  gulp.watch('src/fonts/*', ['fonts']);
+  //gulp.watch('src/images/**/*', ['images']);
+  //gulp.watch('src/fonts/*', ['fonts']);
 });
 
 gulp.task('deploy', ['clean', 'build'], function(done) {
-  ghpages.publish(path.join(__dirname, 'dist'), { logger: gutil.log }, done);
+  ghpages.publish(path.join(__dirname, outputDir), { logger: gutil.log }, done);
 });
 
-gulp.task('build', ['js', 'asciidoc-html', 'jade-html', 'css', 'fonts', 'images']);
+gulp.task('clean', ['clean:js', 'clean:jade-html', 'clean:css']);
+gulp.task('build', ['js', 'jade-html', 'css']);
 gulp.task('serve', ['connect', 'watch']);
 gulp.task('default', ['build']);

@@ -1,42 +1,69 @@
-buildscript {
-  repositories {
-    jcenter()
-  }
-  dependencies {
-    classpath 'com.moowork.gradle:gradle-node-plugin:0.11'
-    classpath 'com.moowork.gradle:gradle-gulp-plugin:0.11'
+plugins {
+  id 'org.asciidoctor.convert' version '1.5.3'
+  id 'com.github.jruby-gradle.base' version '1.2.1'
+  id 'com.moowork.node' version '0.12'
+  id 'com.moowork.gulp' version '0.12'
+}
+
+dependencies {
+  gems('rubygems:asciidoctor-bespoke:1.0.0.alpha.1') {
+    transitive false
   }
 }
 
-apply plugin: 'com.moowork.node'
-apply plugin: 'com.moowork.gulp'
-
-// The pattern npm_<command_name> executes an NPM command.
+// TIP The pattern npm_<command_name> executes an NPM command.
 node {
   version = '0.12.9'
-  npmVersion = '2.14.17'
-  // download = true tells plugin to manage node installation; download = false tells plugin to use system node
-  download = true
-  workDir = file('.gradle/nodejs')
+  download = true // true tells plugin to manage node installation, false tells plugin to use system node
+  workDir = file('gradle/nodejs')
+  // NOTE set npmVersion if you want to upgrade npm
+  //npmVersion = '2.15.3'
 }
 
-// The pattern gulp_<task_name> executes a gulp task.
+// TIP The pattern gulp_<task_name> executes a gulp task; run gulpTasks to get list of tasks
 gulp {
   bufferOutput = false
 }
 
-// QUESTION is there a way to consolidate these task definitions?
+jrubyPrepare {
+  outputDir "rubygems/jruby/${project.jruby.execVersion}"
+}
+
+asciidoctorj {
+  version = '1.5.4'
+}
+
+asciidoctor {
+  dependsOn jrubyPrepare
+  gemPath = jrubyPrepare.outputDir
+  requires 'asciidoctor-bespoke'
+  backends 'bespoke'
+  sourceDir 'src'
+  sources {
+    include 'index.adoc'
+  }
+  resources {
+    from(sourceDir) {
+      include 'images/**'
+      include 'fonts/**'
+    }
+  }
+  outputDir buildDir
+}
+
 gulp_build.dependsOn npmInstall
-task build {}
-build.dependsOn gulp_build
-
-gulp_serve.dependsOn npmInstall
-task serve {}
-serve.dependsOn gulp_serve
-
+gulp_connect.dependsOn npmInstall
 gulp_deploy.dependsOn npmInstall
-task deploy {}
-deploy.dependsOn gulp_deploy
+
+build.dependsOn asciidoctor, gulp_build
+
+task serve {
+  dependsOn asciidoctor, gulp_connect
+}
+
+task deploy {
+  dependsOn asciidoctor, gulp_deploy
+}
 
 task gulpTasks(type: GulpTask) {
   args = ['--tasks-simple']

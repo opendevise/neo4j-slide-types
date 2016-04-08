@@ -1,6 +1,5 @@
 /.gradle/
-/.ruby-version
-/Gemfile.lock
+/build/
+/gradle/nodejs/
 /node_modules/
-/dist/
 /rubygems/

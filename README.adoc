@@ -1,29 +1,53 @@
 = Neo4j Slide Types
 ifndef::env-github[:icons: font]
 ifdef::env-github[:outfilesuffix: .adoc]
+:experimental:
 
 A http://markdalgleish.com/projects/bespoke.js[Bespoke.js] presentation that identifies unique slide types for use in Neo4j presentations.
 
-== View the slide prototypes locally
+== Building the presentation
 
-First, ensure you have a JDK installed.
+=== Prerequisites
 
-Next, install the required Ruby gems (we recommend using RVM at this stage):
+In order to use this project, you only need to be able to run Gradle (specifically, the Gradle Wrappper).
+To run Gradle, you need:
 
- $ gem install bundle && bundler
+. Java Development Kit (JDK) (typically http://openjdk.java.net/install[OpenJDK] or http://www.oracle.com/technetwork/java/javase/downloads/index.html[Oracle JDK]) footnote:[We strongly recommend using http://www.jenv.be[jenv] to manage the JDK.]
 
-Next, execute the `build` task using the Gradle Wrapper.
-This task will setup Node and NPM, install packages and run the build by delegating to Gulp:
+Gradle takes care of the rest!
+
+=== Setup
+
+Next, clone the repository and switch to the project directory:
+
+ $ git clone https://github.com/opendevise/neo4j-slide-types.git
+   cd neo4j-slide-types
+
+That's it!
+You're all set to build the presentation!
+Gradle will setup anything it needs on the first run.
+
+=== Building the static version
+
+You can build a static version of the slides using the following command:
 
  $ ./gradlew build
 
-The output will be compiled into the [path]_dist_ folder.
+The files are built into the _build/bespoke_ directory.
+You can view the slides by navigating to _build/bespoke/index.html_ in your browser.
 
-To run in development mode so that changes take affect immediately, use the `serve` task:
+=== Launching the preview server
+
+The preview server makes the presentation available through a local URL.
+You can launch the preview server using:
 
  $ ./gradlew serve
 
-You can see the result at \http://localhost:8080.
+Once the server is running, you can view the slides by navigating to \http://localhost:8000 in your browser.
+
+WARNING: The underlying Gulp task runs indefinitely, which causes the Gradle build to hang.
+Use kbd:[Ctrl+c] to shutdown the server.
+Disregard the warning message about the task failing.
 
 == Catalog
 
