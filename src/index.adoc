@@ -58,3 +58,7 @@ RETURN h1.name AS from, h2.name AS to, COUNT(*) AS value
 ##  4        hrbrmstr         6
 ##  5       megcevans         5
 ....
+
+== !
+video::floating-circles.mp4[,320,240,alt=Floating circles,role=cover,opts=loop,credit="Video by Brad Zimmerman, CC BY 3.0 - https://vimeo.com/18270184"]
+//video::18270184[vimeo,alt=Floating circles,role=cover,opts="loop,muted"]

@@ -12,6 +12,7 @@ var isWebKit = 'webkitAppearance' in document.documentElement.style,
   forms = require('bespoke-forms'),
   fullscreen = require('bespoke-fullscreen'),
   hash = require('bespoke-hash'),
+  multimedia = require('bespoke-multimedia'),
   nav = require('bespoke-nav'),
   overview = require('bespoke-overview'),
   scale = require('bespoke-scale');
@@ -24,6 +25,8 @@ bespoke.from('.deck', [
   (scaleMethod ? scale(scaleMethod) : function(deck) {}),
   overview(),
   bullets('.build, .build-items > li'),
+  // enable multimedia() if you have videos or SVGs in your slides
+  multimedia(),
   // enable cursor() to automatically hide the cursor when presenting
   //cursor(),
   // enable forms() if you have form elements in your slides
