@@ -112,7 +112,7 @@ task serve {
   dependsOn build, jettyRun
 }
 
-// NOTE Access to local file URLs must be enabled on the LiveReload extension
+// NOTE Access to local file URLs must be enabled in Chrome LiveReload extension if accessing docRoot from file URL
 liveReload {
   //dependsOn build
   docRoot "${project.buildDir}/bespoke"
