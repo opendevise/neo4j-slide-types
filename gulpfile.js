@@ -27,20 +27,20 @@ var pkg = require('./package.json'),
     language_in: 'ES5_STRICT',
     language_out: 'ES5'
   },
-  tidyOpts = {
-    'anchor-as-name': 'false',
-    'coerce-endtags': 'false',
-    'drop-empty-elements': 'false',
-    'fix-uri': 'false',
-    'indent': 'false',
-    'literal-attributes': 'true',
-    'newline': 'LF',
-    'preserve-entities': 'true',
-    'quiet': 'true',
-    'show-warnings': 'false',
-    'tidy-mark': 'false',
-    'wrap': '0'
-  },
+  //tidyOpts = {
+  //  'anchor-as-name': 'false',
+  //  'coerce-endtags': 'false',
+  //  'drop-empty-elements': 'false',
+  //  'fix-uri': 'false',
+  //  'indent': 'false',
+  //  'literal-attributes': 'true',
+  //  'newline': 'LF',
+  //  'preserve-entities': 'true',
+  //  'quiet': 'true',
+  //  'show-warnings': 'false',
+  //  'tidy-mark': 'false',
+  //  'wrap': '0'
+  //},
   outputDir = 'build/bespoke',
   isDist = process.argv.indexOf('deploy') >= 0;
 
@@ -101,29 +101,9 @@ gulp.task('css', ['clean:css'], function() {
     .pipe(connect.reload());
 });
 
-//gulp.task('fonts', ['clean:fonts'], function() {
-//  return gulp.src('src/fonts/*')
-//    .pipe(gulp.dest(outputDir + '/fonts'))
-//    .pipe(connect.reload());
-//});
-
-//gulp.task('images', ['clean:images'], function() {
-//  return gulp.src('src/images/**/*')
-//    .pipe(gulp.dest(outputDir + '/images'))
-//    .pipe(connect.reload());
-//});
-
-//gulp.task('clean', function() {
-//  return del(outputDir);
-//});
-
 gulp.task('clean:jade-html', function() {
   return del(outputDir + '/index-jade.html');
 });
-
-//gulp.task('clean:asciidoc-html', function() {
-//  return del(outputDir + '/index.html');
-//});
 
 gulp.task('clean:js', function() {
   return del(outputDir + '/build/build.js');
@@ -133,25 +113,10 @@ gulp.task('clean:css', function() {
   return del(outputDir + '/build/build.css');
 });
 
-//gulp.task('clean:fonts', function() {
-//  return del(outputDir + '/fonts');
-//});
-
-//gulp.task('clean:images', function() {
-//  return del(outputDir + '/images');
-//});
-
-gulp.task('connect', ['build'], function() {
-  connect.server({ root: outputDir, port: 8000, livereload: true });
-});
-
 gulp.task('watch', function() {
-  //gulp.watch('src/**/*.adoc', ['asciidoc-html']);
   gulp.watch('src/**/*.jade', ['jade-html']);
   gulp.watch('src/scripts/**/*.js', ['js']);
   gulp.watch('src/styles/**/*.styl', ['css']);
-  //gulp.watch('src/images/**/*', ['images']);
-  //gulp.watch('src/fonts/*', ['fonts']);
 });
 
 gulp.task('deploy', ['clean', 'build'], function(done) {
@@ -160,5 +125,4 @@ gulp.task('deploy', ['clean', 'build'], function(done) {
 
 gulp.task('clean', ['clean:js', 'clean:jade-html', 'clean:css']);
 gulp.task('build', ['js', 'jade-html', 'css']);
-gulp.task('serve', ['connect', 'watch']);
 gulp.task('default', ['build']);

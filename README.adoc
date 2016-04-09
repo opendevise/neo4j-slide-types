@@ -45,9 +45,7 @@ You can launch the preview server using:
 
 Once the server is running, you can view the slides by navigating to \http://localhost:8000 in your browser.
 
-WARNING: The underlying Gulp task runs indefinitely, which causes the Gradle build to hang.
-Use kbd:[Ctrl+c] to shutdown the server.
-Disregard the warning message about the task failing.
+NOTE: Use kbd:[Ctrl+c] to shutdown the preview server.
 
 == Catalog
 

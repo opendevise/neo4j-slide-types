@@ -55,12 +55,6 @@ gulp_build.dependsOn npmInstall
 gulp_connect.dependsOn npmInstall
 gulp_deploy.dependsOn npmInstall
 
-build.dependsOn asciidoctor, gulp_build
-
-task serve {
-  dependsOn asciidoctor, gulp_connect
-}
-
 task deploy {
   dependsOn asciidoctor, gulp_deploy
 }
@@ -68,3 +62,21 @@ task deploy {
 task gulpTasks(type: GulpTask) {
   args = ['--tasks-simple']
 }
+
+apply plugin: 'jetty'
+
+tasks.remove(tasks.jettyRunWar)
+tasks.remove(tasks.jettyStop)
+
+jettyRun {
+  dependsOn = [build]
+  contextPath ''
+  httpPort 8000
+  webAppSourceDirectory file("${project.buildDir}/bespoke")
+}
+
+task serve {
+  dependsOn jettyRun
+}
+
+build.dependsOn = [asciidoctor, gulp_build]
