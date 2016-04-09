@@ -33,8 +33,12 @@ gulp {
   bufferOutput = false
 }
 
+task gulpTasks(type: GulpTask) {
+  args = ['--tasks-simple']
+}
+
 gulp_build.dependsOn = []
-//gulp_deploy.dependsOn = []
+gulp_deploy.dependsOn = [build]
 
 asciidoctorj {
   version = '1.5.4'
@@ -60,12 +64,8 @@ asciidoctor {
 
 build.dependsOn = [asciidoctor]
 
-//task deploy {
-//  dependsOn asciidoctor, gulp_deploy
-//}
-
-task gulpTasks(type: GulpTask) {
-  args = ['--tasks-simple']
+task deploy {
+  dependsOn clean, gulp_deploy
 }
 
 apply plugin: 'jetty'
@@ -74,12 +74,12 @@ tasks.remove(tasks.jettyRunWar)
 tasks.remove(tasks.jettyStop)
 
 jettyRun {
-  dependsOn = [build]
+  dependsOn = []
   contextPath ''
   httpPort 8000
   webAppSourceDirectory file("${project.buildDir}/bespoke")
 }
 
 task serve {
-  dependsOn jettyRun
+  dependsOn build, jettyRun
 }

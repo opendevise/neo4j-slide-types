@@ -119,7 +119,7 @@ gulp.task('watch', function() {
   gulp.watch('src/styles/**/*.styl', ['css']);
 });
 
-gulp.task('deploy', ['clean', 'build'], function(done) {
+gulp.task('deploy', function(done) {
   ghpages.publish(path.join(__dirname, outputDir), { logger: gutil.log }, done);
 });
 
