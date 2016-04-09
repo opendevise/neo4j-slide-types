@@ -31,7 +31,6 @@ task setup {
 
 // TIP The pattern gulp_<task_name> executes a gulp task; run gulpTasks to get list of tasks
 gulp {
-  bufferOutput = false
   colors = false
 }
 
