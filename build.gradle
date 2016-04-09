@@ -20,21 +20,28 @@ node {
   //npmVersion = '2.15.3'
 }
 
+jrubyPrepare {
+  outputDir "rubygems/jruby/${project.jruby.execVersion}"
+}
+
+task setup {
+  dependsOn npmInstall, jrubyPrepare
+}
+
 // TIP The pattern gulp_<task_name> executes a gulp task; run gulpTasks to get list of tasks
 gulp {
   bufferOutput = false
 }
 
-jrubyPrepare {
-  outputDir "rubygems/jruby/${project.jruby.execVersion}"
-}
+gulp_build.dependsOn = []
+//gulp_deploy.dependsOn = []
 
 asciidoctorj {
   version = '1.5.4'
 }
 
 asciidoctor {
-  dependsOn jrubyPrepare
+  dependsOn gulp_build
   gemPath = jrubyPrepare.outputDir
   requires 'asciidoctor-bespoke'
   backends 'bespoke'
@@ -51,13 +58,11 @@ asciidoctor {
   outputDir buildDir
 }
 
-gulp_build.dependsOn npmInstall
-gulp_connect.dependsOn npmInstall
-gulp_deploy.dependsOn npmInstall
+build.dependsOn = [asciidoctor]
 
-task deploy {
-  dependsOn asciidoctor, gulp_deploy
-}
+//task deploy {
+//  dependsOn asciidoctor, gulp_deploy
+//}
 
 task gulpTasks(type: GulpTask) {
   args = ['--tasks-simple']
@@ -78,5 +83,3 @@ jettyRun {
 task serve {
   dependsOn jettyRun
 }
-
-build.dependsOn = [asciidoctor, gulp_build]

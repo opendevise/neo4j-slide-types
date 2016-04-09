@@ -23,9 +23,12 @@ Next, clone the repository and switch to the project directory:
  $ git clone https://github.com/opendevise/neo4j-slide-types.git
    cd neo4j-slide-types
 
+Then, collect the required dependencies and initialize the build:
+
+ $ ./gradlew setup
+
 That's it!
-You're all set to build the presentation!
-Gradle will setup anything it needs on the first run.
+You're all set to build the presentation.
 
 === Building the static version
 
