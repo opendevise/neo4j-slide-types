@@ -73,6 +73,8 @@ asciidoctor {
   gemPath = jrubyPrepare.outputDir
   requires 'asciidoctor-bespoke'
   backends 'bespoke'
+  // NOTE enable the options below if you want to load custom templates
+  //options template_dirs: [file('src/templates')], template_engine: 'slim'
   // NOTE this task will trigger for any file change in the sourceDir, not just index.adoc
   sourceDir 'src'
   sources {
