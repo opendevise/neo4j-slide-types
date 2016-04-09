@@ -48,7 +48,29 @@ You can launch the preview server using:
 
 Once the server is running, you can view the slides by navigating to \http://localhost:8000 in your browser.
 
-NOTE: Use kbd:[Ctrl+c] to shutdown the preview server.
+NOTE: Use kbd:[ctrl+c] to shutdown the preview server.
+
+=== Enabling automatic updates
+
+You can have the build monitor the source files for changes and rerun the tasks whenever a change is detected.
+You can also get it to push updates directly to the browser (i.e., LiveReload), saving you from having to manually refresh the page.
+
+In order to activate this arrangement, you'll need two terminal windows open.
+In the first window, run the task that generates the slides using continuous build mode:
+
+ $ ./gradlew -t build
+
+This command runs Gradle indefinitely, actively monitoring the source files for changes and rerunning the `build` task whenever a change is detected.
+Thanks to Gradle's up-to-date checks, only the tasks affected by the source file(s) that changed will do work.
+
+In the second window, run the task that launches the preview server and activates the LiveReload protocol:
+
+ $ ./gradlew serveLive
+
+Once the server is running, you can view the slides by navigating to \http://localhost:8000 in your browser.
+This time, however, you won't have to worry about refreshing the page.
+
+NOTE: Use kbd:[ctrl+c] to shutdown the preview server and LiveReload.
 
 == Catalog
 

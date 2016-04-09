@@ -3,12 +3,9 @@ var pkg = require('./package.json'),
   autoprefixer = require('gulp-autoprefixer'),
   browserify = require('browserify'),
   buffer = require('vinyl-buffer'),
-  chmod = require('gulp-chmod'),
   closureCompiler = require('google-closure-compiler').gulp(),
-  connect = require('gulp-connect'),
   csso = require('gulp-csso'),
   del = require('del'),
-  exec = require('gulp-exec'),
   ghpages = require('gh-pages'),
   gulp = require('gulp'),
   gutil = require('gulp-util'),
@@ -19,7 +16,6 @@ var pkg = require('./package.json'),
   source = require('vinyl-source-stream'),
   stylus = require('gulp-stylus'),
   through = require('through'),
-  tidy = require('tidy-html5').tidy_html5,
   uglify = require('gulp-uglify'),
   closureCompilerOpts = {
     compilation_level: 'SIMPLE', // ADVANCED breaks bespoke-fullscreen
@@ -44,7 +40,7 @@ var pkg = require('./package.json'),
   outputDir = 'build/bespoke',
   isDist = process.argv.indexOf('deploy') >= 0;
 
-gulp.task('js', ['clean:js'], function() {
+gulp.task('js', function() {
   // see https://wehavefaces.net/gulp-browserify-the-gulp-y-way-bb359b3f9623
   return browserify('src/scripts/main.js').bundle()
     // NOTE this error handler fills the role of plumber() when working with browserify
@@ -53,20 +49,18 @@ gulp.task('js', ['clean:js'], function() {
     .pipe(buffer())
     .pipe(isDist ? closureCompiler(closureCompilerOpts) : uglify())
     .pipe(rename('build.js'))
-    .pipe(gulp.dest(outputDir + '/build'))
-    .pipe(connect.reload());
+    .pipe(gulp.dest(outputDir + '/build'));
 });
 
-gulp.task('jade-html', ['clean:jade-html'], function() {
+gulp.task('html_jade', function() {
   return gulp.src('src/index.jade')
     .pipe(isDist ? through() : plumber())
     .pipe(jade({ pretty: '  ' }))
     .pipe(rename('index-jade.html'))
-    .pipe(gulp.dest(outputDir))
-    .pipe(connect.reload());
+    .pipe(gulp.dest(outputDir));
 });
 
-//gulp.task('asciidoc-html', ['clean:asciidoc-html'], function() {
+//gulp.task('asciidoc-html', function() {
 //  return gulp.src('src/index.adoc')
 //    .pipe(isDist ? through() : plumber())
 //    // NOTE using stdin here would cause loss of context
@@ -86,22 +80,20 @@ gulp.task('jade-html', ['clean:jade-html'], function() {
 //    }))
 //    .pipe(rename('index.html'))
 //    .pipe(chmod(644))
-//    .pipe(gulp.dest(outputDir))
-//    .pipe(connect.reload());
+//    .pipe(gulp.dest(outputDir));
 //});
 
-gulp.task('css', ['clean:css'], function() {
+gulp.task('css', function() {
   return gulp.src('src/styles/main.styl')
     .pipe(isDist ? through() : plumber())
     .pipe(stylus({ 'include css': true, paths: ['./node_modules'] }))
     .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
     .pipe(isDist ? csso() : through())
     .pipe(rename('build.css'))
-    .pipe(gulp.dest(outputDir + '/build'))
-    .pipe(connect.reload());
+    .pipe(gulp.dest(outputDir + '/build'));
 });
 
-gulp.task('clean:jade-html', function() {
+gulp.task('clean:html_jade', function() {
   return del(outputDir + '/index-jade.html');
 });
 
@@ -113,16 +105,9 @@ gulp.task('clean:css', function() {
   return del(outputDir + '/build/build.css');
 });
 
-gulp.task('watch', function() {
-  gulp.watch('src/**/*.jade', ['jade-html']);
-  gulp.watch('src/scripts/**/*.js', ['js']);
-  gulp.watch('src/styles/**/*.styl', ['css']);
-});
-
 gulp.task('deploy', function(done) {
   ghpages.publish(path.join(__dirname, outputDir), { logger: gutil.log }, done);
 });
 
-gulp.task('clean', ['clean:js', 'clean:jade-html', 'clean:css']);
-gulp.task('build', ['js', 'jade-html', 'css']);
-gulp.task('default', ['build']);
+gulp.task('clean', ['clean:js', 'clean:html_jade', 'clean:css']);
+gulp.task('build', ['js', 'html_jade', 'css']);

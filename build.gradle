@@ -1,8 +1,9 @@
 plugins {
-  id 'org.asciidoctor.convert' version '1.5.3'
-  id 'com.github.jruby-gradle.base' version '1.2.1'
   id 'com.moowork.node' version '0.12'
   id 'com.moowork.gulp' version '0.12'
+  id 'org.asciidoctor.convert' version '1.5.3'
+  id 'com.github.jruby-gradle.base' version '1.2.1'
+  id 'org.kordamp.gradle.livereload' version '0.2.1'
 }
 
 dependencies {
@@ -16,7 +17,7 @@ node {
   version = '0.12.9'
   download = true // true tells plugin to manage node installation, false tells plugin to use system node
   workDir = file('gradle/nodejs')
-  // NOTE set npmVersion if you want to upgrade npm
+  // NOTE set npmVersion only if you want to upgrade npm
   //npmVersion = '2.15.3'
 }
 
@@ -31,6 +32,7 @@ task setup {
 // TIP The pattern gulp_<task_name> executes a gulp task; run gulpTasks to get list of tasks
 gulp {
   bufferOutput = false
+  colors = false
 }
 
 task gulpTasks(type: GulpTask) {
@@ -38,17 +40,41 @@ task gulpTasks(type: GulpTask) {
 }
 
 gulp_build.dependsOn = []
-gulp_deploy.dependsOn = [build]
+gulp_clean.dependsOn = []
+
+gulp_js {
+  dependsOn = []
+  inputs.file 'src/scripts/main.js'
+  outputs.file "${project.buildDir}/bespoke/build/build.js"
+}
+
+gulp_css {
+  dependsOn = []
+  inputs.dir 'src/styles'
+  outputs.file "${project.buildDir}/bespoke/build/build.css"
+}
+
+gulp_html_jade {
+  dependsOn = []
+  inputs.file 'src/index.jade'
+  outputs.file "${project.buildDir}/bespoke/index-jade.html"
+}
+
+gulp_deploy {
+  dependsOn = []
+  mustRunAfter build
+}
 
 asciidoctorj {
   version = '1.5.4'
 }
 
 asciidoctor {
-  dependsOn gulp_build
+  dependsOn = [gulp_js, gulp_css, gulp_html_jade] 
   gemPath = jrubyPrepare.outputDir
   requires 'asciidoctor-bespoke'
   backends 'bespoke'
+  // NOTE this task will trigger for any file change in the sourceDir, not just index.adoc
   sourceDir 'src'
   sources {
     include 'index.adoc'
@@ -62,19 +88,20 @@ asciidoctor {
   outputDir buildDir
 }
 
-build.dependsOn = [asciidoctor]
+build {
+  dependsOn = [asciidoctor]
+  mustRunAfter clean
+}
 
 task deploy {
-  dependsOn clean, gulp_deploy
+  dependsOn clean, build, gulp_deploy
 }
 
 apply plugin: 'jetty'
 
-tasks.remove(tasks.jettyRunWar)
-tasks.remove(tasks.jettyStop)
-
 jettyRun {
   dependsOn = []
+  mustRunAfter build
   contextPath ''
   httpPort 8000
   webAppSourceDirectory file("${project.buildDir}/bespoke")
@@ -82,4 +109,20 @@ jettyRun {
 
 task serve {
   dependsOn build, jettyRun
+}
+
+// NOTE Access to local file URLs must be enabled on the LiveReload extension
+liveReload {
+  //dependsOn build
+  docRoot "${project.buildDir}/bespoke"
+}
+
+task serveLive {
+  dependsOn build
+  doFirst {
+    tasks.jettyRun.daemon true
+    tasks.jettyRun.execute()
+    println "Server running at http://localhost:${tasks.jettyRun.httpPort}/"
+    tasks.liveReload.execute()
+  }
 }
