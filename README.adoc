@@ -3,7 +3,7 @@ ifndef::env-github[:icons: font]
 ifdef::env-github[:outfilesuffix: .adoc]
 :experimental:
 
-A http://markdalgleish.com/projects/bespoke.js[Bespoke.js] presentation that identifies unique slide types for use in Neo4j presentations.
+This repository documents slide types and presentation techniques and also provides a sample http://markdalgleish.com/projects/bespoke.js[Bespoke.js] presentation that implements several of these ideas.
 
 == Building the presentation
 

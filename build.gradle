@@ -43,19 +43,19 @@ gulp_clean.dependsOn = []
 
 gulp_js {
   dependsOn = []
-  inputs.file 'src/scripts/main.js'
+  inputs.file 'src/app/scripts/main.js'
   outputs.file "${project.buildDir}/bespoke/build/build.js"
 }
 
 gulp_css {
   dependsOn = []
-  inputs.dir 'src/styles'
+  inputs.dir 'src/app/styles'
   outputs.file "${project.buildDir}/bespoke/build/build.css"
 }
 
 gulp_html_jade {
   dependsOn = []
-  inputs.file 'src/index.jade'
+  inputs.file 'src/content/index.jade'
   outputs.file "${project.buildDir}/bespoke/index-jade.html"
 }
 
@@ -68,6 +68,7 @@ asciidoctorj {
   version = '1.5.4'
 }
 
+// NOTE this task will trigger for any file change in the sourceDir, not just index.adoc
 asciidoctor {
   dependsOn = [gulp_js, gulp_css, gulp_html_jade] 
   gemPath = jrubyPrepare.outputDir
@@ -75,8 +76,7 @@ asciidoctor {
   backends 'bespoke'
   // NOTE enable the options below if you want to load custom templates
   //options template_dirs: [file('src/templates')], template_engine: 'slim'
-  // NOTE this task will trigger for any file change in the sourceDir, not just index.adoc
-  sourceDir 'src'
+  sourceDir 'src/content'
   sources {
     include 'index.adoc'
   }

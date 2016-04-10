@@ -42,10 +42,10 @@ var pkg = require('./package.json'),
 
 gulp.task('js', function() {
   // see https://wehavefaces.net/gulp-browserify-the-gulp-y-way-bb359b3f9623
-  return browserify('src/scripts/main.js').bundle()
+  return browserify('src/app/scripts/main.js').bundle()
     // NOTE this error handler fills the role of plumber() when working with browserify
     .on('error', function(e) { if (isDist) { throw e; } else { gutil.log(e.stack); this.emit('end'); } })
-    .pipe(source('src/scripts/main.js'))
+    .pipe(source('src/app/scripts/main.js'))
     .pipe(buffer())
     .pipe(isDist ? closureCompiler(closureCompilerOpts) : uglify())
     .pipe(rename('build.js'))
@@ -53,7 +53,7 @@ gulp.task('js', function() {
 });
 
 gulp.task('html_jade', function() {
-  return gulp.src('src/index.jade')
+  return gulp.src('src/content/index.jade')
     .pipe(isDist ? through() : plumber())
     .pipe(jade({ pretty: '  ' }))
     .pipe(rename('index-jade.html'))
@@ -61,11 +61,11 @@ gulp.task('html_jade', function() {
 });
 
 //gulp.task('asciidoc-html', function() {
-//  return gulp.src('src/index.adoc')
+//  return gulp.src('src/content/index.adoc')
 //    .pipe(isDist ? through() : plumber())
 //    // NOTE using stdin here would cause loss of context
-//    //.pipe(exec('bundle exec asciidoctor-bespoke -o - src/index.adoc', { pipeStdout: true }))
-//    .pipe(exec('bundle exec asciidoctor-bespoke -T src/templates -o - src/index.adoc', { pipeStdout: true }))
+//    //.pipe(exec('bundle exec asciidoctor-bespoke -o - src/content/index.adoc', { pipeStdout: true }))
+//    .pipe(exec('bundle exec asciidoctor-bespoke -T src/templates -o - src/content/index.adoc', { pipeStdout: true }))
 //    .pipe(exec.reporter({ stdout: false }))
 //    .pipe(through(function(file) {
 //      var html = tidy(file.contents.toString(), tidyOpts) // NOTE based on tidy 4.9.26
@@ -84,7 +84,7 @@ gulp.task('html_jade', function() {
 //});
 
 gulp.task('css', function() {
-  return gulp.src('src/styles/main.styl')
+  return gulp.src('src/app/styles/main.styl')
     .pipe(isDist ? through() : plumber())
     .pipe(stylus({ 'include css': true, paths: ['./node_modules'] }))
     .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
