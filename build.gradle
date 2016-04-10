@@ -10,6 +10,7 @@ plugins {
   id 'org.asciidoctor.convert' version '1.5.3'
   id 'com.github.jruby-gradle.base' version '1.2.1'
   id 'org.kordamp.gradle.livereload' version '0.2.1'
+  id 'org.ajoberstar.github-pages' version '1.4.2'
 }
 
 dependencies {
@@ -51,23 +52,21 @@ gulp_js {
   dependsOn = []
   inputs.file 'src/app/scripts/main.js'
   outputs.file "$buildDir/bespoke/build/build.js"
+  doFirst { if (gradle.taskGraph.hasTask(':publish')) args << '--dist' }
 }
 
 gulp_css {
   dependsOn = []
   inputs.dir 'src/app/styles'
   outputs.file "$buildDir/bespoke/build/build.css"
+  doFirst { if (gradle.taskGraph.hasTask(':publish')) args << '--dist' }
 }
 
 gulp_html_jade {
   dependsOn = []
   inputs.file 'src/content/index.jade'
   outputs.file "$buildDir/bespoke/index-jade.html"
-}
-
-gulp_deploy {
-  dependsOn = []
-  mustRunAfter build
+  doFirst { if (gradle.taskGraph.hasTask(':publish')) args << '--dist' }
 }
 
 asciidoctorj {
@@ -84,7 +83,7 @@ asciidoctor {
   //options template_dirs: [file('src/content/templates')], template_engine: 'slim'
   extensions {
     postprocessor { document, output ->
-      // TIP to only beautify on deploy, wrap in condition `if (gradle.taskGraph.hasTask(':deploy'))`
+      // TIP to only beautify on publish, wrap in condition `if (gradle.taskGraph.hasTask(':publish'))`
       org.jsoup.parser.Tag.valueOf('figcaption').formatAsBlock = false
       def svgs = []
       output = output.replaceAll(/(?s)<svg.*?>.*?<\/svg>/) { svgs << it; '<!-- SVG SLOT -->' }
@@ -109,10 +108,6 @@ asciidoctor {
 build {
   dependsOn = [asciidoctor]
   mustRunAfter clean
-}
-
-task deploy {
-  dependsOn clean, build, gulp_deploy
 }
 
 apply plugin: 'jetty'
@@ -143,4 +138,24 @@ task serveLive {
     println "Server running at http://localhost:${tasks.jettyRun.httpPort}/"
     tasks.liveReload.execute()
   }
+}
+
+githubPages {
+  repoUri = new org.eclipse.jgit.lib.RepositoryBuilder()
+      .readEnvironment().findGitDir(file('.')).build()
+      .getConfig().getString('remote', 'origin', 'url')
+  commitMessage = 'Publish updates'
+  pages {
+    from(file("$buildDir/bespoke")) {
+      into '.'
+    }
+  }
+}
+
+publishGhPages {
+  mustRunAfter build
+}
+
+task publish {
+  dependsOn clean, build, publishGhPages
 }
