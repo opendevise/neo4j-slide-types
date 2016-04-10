@@ -1,12 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="generator" content="Asciidoctor 1.5.4 (Bespoke.js converter)">
-<meta name="author" content="Michael Hunger">
 <title>Neo4j Slide Types</title>
+<meta name="author" content="Michael Hunger">
+<meta name="generator" content="Asciidoctor 1.5.4 (Bespoke.js converter)">
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<meta name="mobile-web-app-capable" content="yes">
 <link rel="stylesheet" href="build/build.css">
 </head>
 <body>
@@ -14,7 +15,7 @@
 <section class="title image" style="background-image: url(images/backdrop-nodes-green.svg); background-size: cover; background-repeat: no-repeat" data-title="">
 <h1>Neo4j Slide Types</h1>
 <footer>
-<p class="author"><span class="personname"><span class="firstname">Michael</span> <span class="surname">Hunger</span></span><span class="affiliation"><span class="position">Head of Developer Relations</span> <span class="organization">Neo Technology</span></span><img class="avatar" src="images/michael-hunger.jpg" alt="Michael Hunger"><span class="contact"><span class="twitter">@mesirii</span></span></p>
+<p class="author"><span class="personname"><span class="firstname">Michael</span> <span class="surname">Hunger</span></span><span class="affiliation"><span class="position">Head of Developer Relations</span> <span class="organization">Neo Technology</span></span><img class="avatar" src="images/michael-hunger.jpg" alt="Michael Hunger"><span class="contact"><span class="twitter">@mesirii</span> <span class="email">michael@neo4j.org</span></span></p>
 </footer>
 </section>
 <section class="speaker">
@@ -22,13 +23,15 @@
 <h2 contenteditable="true" spellcheck="false">Michael Hunger</h2>
 <h3 contenteditable="true" spellcheck="false">Head of Developer Relations</h3>
 </header>
-<figure class="image headshot"><img src="images/michael-hunger.jpg" alt="Michael Hunger"></figure>
+<figure class="image headshot">
+<img src="images/michael-hunger.jpg" alt="Michael Hunger">
+</figure>
 <p class="contact" contenteditable="true" spellcheck="false">@mesirii | michael@neo4j.org</p>
 </section>
 <section class="agenda">
 <ul class="build-items agenda">
 <li><span class="primary">Databases are no fun</span></li>
-<li><span class="primary">Relational pain &#8594; Graph fun</span></li>
+<li><span class="primary">Relational pain &#x2192; Graph fun</span></li>
 <li><span class="primary">The world is a graph</span></li>
 <li><span class="primary">Model, query, import</span></li>
 <li><span class="primary">Developer zone fun</span></li>
@@ -38,7 +41,9 @@
 <h2>[:Modeling]</h2>
 </section>
 <section class="subject">
-<figure class="image"><img src="images/spring-data-neo4j.png" alt="Spring Data Neo4j" width="150" height="150"></figure>
+<figure class="image">
+<img src="images/spring-data-neo4j.png" alt="Spring Data Neo4j" width="150" height="150">
+</figure>
 </section>
 <section class="image" style="background-image: url(images/backdrop-mountains.jpg); background-size: cover; background-repeat: no-repeat">
 <h2>The world is a graph</h2>
@@ -58,12 +63,19 @@
 WHERE h1.name = {hashtag}
 RETURN h1.name AS from, h2.name AS to, COUNT(*) AS value</code></pre>
 </div>
-<pre class="screen result build">## id      u.username  mentions
+<pre class="screen result build"><samp>## id      u.username  mentions
 ##  1   hadleywickham        43
 ##  2        RLangTip         6
 ##  3  nicolemargaret         6
 ##  4        hrbrmstr         6
-##  5       megcevans         5</pre>
+##  5       megcevans         5</samp></pre>
+</section>
+<section>
+<figure class="video cover">
+<video src="images/floating-circles.mp4" width="320" height="240" preload="auto" loop="true">
+<span class="alt">Floating circles</span>
+</video>
+</figure>
 </section>
 </article>
 <script src="build/build.js"></script>
