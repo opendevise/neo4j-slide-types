@@ -22,7 +22,7 @@ node {
 }
 
 jrubyPrepare {
-  outputDir "rubygems/jruby/${project.jruby.execVersion}"
+  outputDir "rubygems/jruby/${jruby.execVersion}"
 }
 
 task setup {
@@ -44,19 +44,19 @@ gulp_clean.dependsOn = []
 gulp_js {
   dependsOn = []
   inputs.file 'src/app/scripts/main.js'
-  outputs.file "${project.buildDir}/bespoke/build/build.js"
+  outputs.file "$buildDir/bespoke/build/build.js"
 }
 
 gulp_css {
   dependsOn = []
   inputs.dir 'src/app/styles'
-  outputs.file "${project.buildDir}/bespoke/build/build.css"
+  outputs.file "$buildDir/bespoke/build/build.css"
 }
 
 gulp_html_jade {
   dependsOn = []
   inputs.file 'src/content/index.jade'
-  outputs.file "${project.buildDir}/bespoke/index-jade.html"
+  outputs.file "$buildDir/bespoke/index-jade.html"
 }
 
 gulp_deploy {
@@ -105,7 +105,7 @@ jettyRun {
   mustRunAfter build
   contextPath ''
   httpPort 8000
-  webAppSourceDirectory file("${project.buildDir}/bespoke")
+  webAppSourceDirectory file("$buildDir/bespoke")
 }
 
 task serve {
@@ -115,7 +115,7 @@ task serve {
 // NOTE Access to local file URLs must be enabled in Chrome LiveReload extension if accessing docRoot from file URL
 liveReload {
   //dependsOn build
-  docRoot "${project.buildDir}/bespoke"
+  docRoot "$buildDir/bespoke"
 }
 
 task serveLive {
