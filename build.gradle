@@ -1,3 +1,9 @@
+buildscript {
+  dependencies {
+    classpath 'org.jsoup:jsoup:1.8.3'
+  }
+}
+
 plugins {
   id 'com.moowork.node' version '0.12'
   id 'com.moowork.gulp' version '0.12'
@@ -74,8 +80,19 @@ asciidoctor {
   gemPath = jrubyPrepare.outputDir
   requires 'asciidoctor-bespoke'
   backends 'bespoke'
-  // NOTE enable the options below if you want to load custom templates
+  // NOTE enable the options below to use custom templates
   //options template_dirs: [file('src/content/templates')], template_engine: 'slim'
+  extensions {
+    postprocessor { document, output ->
+      // TIP to only beautify on deploy, wrap in condition `if (gradle.taskGraph.hasTask(':deploy'))`
+      org.jsoup.parser.Tag.valueOf('figcaption').formatAsBlock = false
+      def svgs = []
+      output = output.replaceAll(/(?s)<svg.*?>.*?<\/svg>/) { svgs << it; '<!-- SVG SLOT -->' }
+      org.jsoup.nodes.Document doc = org.jsoup.Jsoup.parse(output, 'UTF-8')
+      doc.outputSettings().indentAmount(0).escapeMode(org.jsoup.nodes.Entities.EscapeMode.xhtml).charset('ASCII')
+      doc.outerHtml().replaceAll(/(?m) +$/, '').replaceAll(/<!-- SVG SLOT -->/) { svgs.removeAt(0) }
+    }
+  }
   sourceDir 'src/content'
   sources {
     include 'index.adoc'
