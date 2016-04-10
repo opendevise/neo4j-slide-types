@@ -23,7 +23,7 @@ dependencies {
 node {
   version = '0.12.9'
   download = true // true tells plugin to manage node installation, false tells plugin to use system node
-  workDir = file('gradle/nodejs')
+  workDir = file('.gradle/nodejs')
   // NOTE set npmVersion only if you want to upgrade npm
   //npmVersion = '2.15.3'
 }
@@ -144,6 +144,7 @@ githubPages {
   repoUri = new org.eclipse.jgit.lib.RepositoryBuilder()
       .readEnvironment().findGitDir(file('.')).build()
       .getConfig().getString('remote', 'origin', 'url')
+  workingPath = '.gradle/ghpages'
   commitMessage = 'Publish updates'
   pages {
     from(file("$buildDir/bespoke")) {
