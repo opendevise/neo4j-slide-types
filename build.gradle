@@ -55,8 +55,13 @@ gulp_js {
   doFirst { if (gradle.taskGraph.hasTask(':publish')) args << '--dist' }
 }
 
+task fonts(type: Copy) {
+  from 'src/app/fonts'
+  into "$buildDir/bespoke/fonts"
+}
+
 gulp_css {
-  dependsOn = []
+  dependsOn = [fonts]
   inputs.dir 'src/app/styles'
   outputs.file "$buildDir/bespoke/build/build.css"
   doFirst { if (gradle.taskGraph.hasTask(':publish')) args << '--dist' }
@@ -75,7 +80,7 @@ asciidoctorj {
 
 // NOTE this task will trigger for any file change in the sourceDir, not just index.adoc
 asciidoctor {
-  dependsOn = [gulp_js, gulp_css, gulp_html_jade] 
+  dependsOn = [gulp_js, gulp_css, gulp_html_jade]
   gemPath = jrubyPrepare.outputDir
   requires 'asciidoctor-bespoke'
   backends 'bespoke'
@@ -99,7 +104,6 @@ asciidoctor {
   resources {
     from(sourceDir) {
       include 'images/**'
-      include 'fonts/**'
     }
   }
   outputDir buildDir
