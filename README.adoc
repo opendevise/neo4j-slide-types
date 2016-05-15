@@ -97,6 +97,7 @@ See the <<docs/slide-types#,Neo4j Slide Types>> catalog (in progress) for a list
 * http://www.ted.com/talks/andrew_stanton_the_clues_to_a_great_story[The Clues to a Great Story] - Andrew Stanton
 * https://pitchdeck.improvepresentation.com/what-is-a-pitch-deck[What is a pitch deck]
 * http://www.inc.com/geoffrey-james/5-foolproof-ways-to-start-any-presentation.html[5 foolproof ways to start any presentation]
+* http://blog.prezi.com/latest/2015/7/6/the-four-different-types-of-learners-and-what-they-mean-to-your-presentations-infographic[The Four Different Types of Learners, And What They Mean to Your Presentations]
 
 "They were just there to learn about XYZ, and, hopefully, we delivered -- the software was there just to help.
 Which is otherwise a great way to think about any slide deck you ever do."
