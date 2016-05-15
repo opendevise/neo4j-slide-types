@@ -322,6 +322,10 @@ image::quote-slide.jpg[]
 
 image::quote-slide-2.jpg[]
 
+image::quote-slide-3.jpg[]
+
+image::quote-slide-4.jpg[]
+
 ////
 === Tweet
 
