@@ -131,7 +131,7 @@ The following presentations are either good examples or exhibit bright spots.
 
 === Photo archives
 
-* http://unspash.com
+* https://unsplash.com
 * https://pixabay.com
 * http://finda.photo
 * https://www.flickr.com/photos/usinterior/favorites
